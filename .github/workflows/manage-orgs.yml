@@ -1,0 +1,84 @@
+name: Manage Orgs
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Action to perform'
+        required: true
+        type: choice
+        options:
+          - add
+          - remove
+      org_owner:
+        description: 'GitHub org/owner name (e.g. Orion-Sleep)'
+        required: true
+        type: string
+      org_label:
+        description: 'Display label (e.g. Orion). Ignored for remove.'
+        required: false
+        type: string
+      joined_date:
+        description: 'Date you joined (YYYY-MM-DD). Ignored for remove.'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  update-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update config.json
+        run: |
+          ACTION="${{ inputs.action }}"
+          ORG="${{ inputs.org_owner }}"
+          LABEL="${{ inputs.org_label }}"
+          JOINED="${{ inputs.joined_date }}"
+
+          if [ "$ACTION" = "add" ]; then
+            if [ -z "$JOINED" ]; then
+              echo "Error: joined_date is required for add"
+              exit 1
+            fi
+            LABEL="${LABEL:-$ORG}"
+            python3 -c "
+          import json
+          with open('config.json') as f:
+              cfg = json.load(f)
+          if any(o['name'] == '$ORG' for o in cfg['orgs']):
+              print('Org $ORG already exists')
+              exit(0)
+          cfg['orgs'].append({'name': '$ORG', 'joined': '$JOINED', 'label': '$LABEL'})
+          with open('config.json', 'w') as f:
+              json.dump(cfg, f, indent=2)
+              f.write('\n')
+          print('Added $ORG')
+          "
+          elif [ "$ACTION" = "remove" ]; then
+            python3 -c "
+          import json
+          with open('config.json') as f:
+              cfg = json.load(f)
+          cfg['orgs'] = [o for o in cfg['orgs'] if o['name'] != '$ORG']
+          with open('config.json', 'w') as f:
+              json.dump(cfg, f, indent=2)
+              f.write('\n')
+          print('Removed $ORG')
+          "
+          fi
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add config.json
+          if git diff --staged --quiet; then
+            echo "No changes."
+          else
+            git commit -m "config: ${{ inputs.action }} org ${{ inputs.org_owner }}"
+            git push
+          fi

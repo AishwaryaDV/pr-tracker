@@ -1,0 +1,13 @@
+{
+  "author": "AishwaryaDV",
+  "orgs": [
+    {
+      "name": "Orion-Sleep",
+      "joined": "2026-08-01",
+      "label": "Orion"
+    }
+  ],
+  "dashboard": {
+    "title": "PR Tracker"
+  }
+}

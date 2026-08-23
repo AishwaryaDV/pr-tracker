@@ -1,0 +1,47 @@
+name: Track PRs
+
+on:
+  schedule:
+    - cron: '0 18 * * 0'
+  workflow_dispatch:
+    inputs:
+      full_backfill:
+        description: 'Re-fetch all PRs from each org join date'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch PRs
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
+          FULL_BACKFILL: ${{ inputs.full_backfill || 'false' }}
+        run: python3 scripts/fetch_prs.py
+
+      - name: Build dashboard
+        run: python3 scripts/build_dashboard.py
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/
+          if git diff --staged --quiet; then
+            echo "No changes."
+          else
+            COUNT=$(python3 -c "import json; print(len(json.load(open('data/all-prs.json'))))")
+            git commit -m "update: ${COUNT} PRs tracked — $(date -u +%Y-%m-%d)"
+            git push
+          fi
