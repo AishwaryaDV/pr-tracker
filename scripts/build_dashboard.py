@@ -185,13 +185,15 @@ body{{font-family:var(--font-sans);background:var(--bg);color:var(--text);
   text-transform:uppercase;letter-spacing:.05em}}
 .hm-graph{{display:flex}}
 .hm-day-labels{{display:flex;flex-direction:column;gap:3px;padding-top:22px;padding-right:8px;flex-shrink:0}}
-.hm-day-labels .hm-dl{{height:14px;font-size:11px;color:var(--text-dim);display:flex;align-items:center;line-height:1}}
+.hm-day-labels .hm-dl{{height:16px;font-size:11px;color:var(--text-dim);display:flex;align-items:center;line-height:1}}
 .hm-scroll{{overflow-x:auto;padding-bottom:4px;flex:1}}
 .hm-month-row{{display:flex;gap:3px;height:18px;margin-bottom:4px}}
-.hm-month-slot{{width:14px;flex-shrink:0;font-size:11px;color:var(--text-dim);white-space:nowrap}}
+.hm-month-slot{{width:16px;flex-shrink:0;font-size:11px;color:var(--text-dim);white-space:nowrap}}
 .hm-cells{{display:flex;gap:3px}}
 .hm-week{{display:flex;flex-direction:column;gap:3px}}
-.hm-cell{{width:14px;height:14px;border-radius:2px;background:var(--hm-0);cursor:pointer;transition:outline-color .1s}}
+.hm-cell{{width:16px;height:16px;border-radius:2px;background:var(--hm-0);cursor:pointer;transition:outline-color .1s;
+  display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:transparent;font-variant-numeric:tabular-nums}}
+.hm-cell.has-count{{color:var(--bg)}}.hm-cell.l1.has-count,.hm-cell.l2.has-count{{color:var(--text-muted)}}
 .hm-cell.future{{background:transparent;cursor:default}}
 .hm-cell.pre-join{{background:var(--hm-pre);cursor:default}}
 .hm-cell.l1{{background:var(--hm-1)}}.hm-cell.l2{{background:var(--hm-2)}}
@@ -541,8 +543,10 @@ function renderHeatmap() {{
       else if (count === 2) cls += ' l2';
       else if (count <= 4) cls += ' l3';
       else cls += ' l4';
+      if (count > 0) cls += ' has-count';
       if (selectedDay === day.date) cls += ' selected';
       d.className = cls;
+      if (count > 0) d.textContent = count;
       d.dataset.date = day.date;
       d.dataset.count = count;
       d.title = count + ' PR' + (count !== 1 ? 's':'') + ' on ' + day.date;
