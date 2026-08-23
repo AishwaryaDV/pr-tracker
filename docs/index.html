@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PR Tracker</title>
+<style>
+@font-face{font-family:'Geist';src:url('fonts/Geist-Variable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Geist Mono';src:url('fonts/GeistMono-Variable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --font-sans:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-mono:'Geist Mono',ui-monospace,SFMono-Regular,monospace;
+  --bg:#1c1917;--surface:#231f1c;--surface-2:#2a2522;--border:rgba(245,240,235,.1);
+  --border-strong:rgba(245,240,235,.2);
+  --text:#f5f0eb;--text-muted:#a8a29e;--text-dim:#57534e;
+  --accent:#f5f0eb;
+  --teal:#6ec6a5;--teal-muted:rgba(110,198,165,.12);
+  --amber:#d4a843;--amber-muted:rgba(212,168,67,.12);
+  --stone:#a8a29e;--stone-muted:rgba(168,162,158,.1);
+  --hm-0:#231f1c;--hm-1:#302818;--hm-2:#4d3e1c;--hm-3:#7a6224;--hm-4:#d4a843;
+  --hm-pre:#171412;
+  --radius:6px;
+}
+body{font-family:var(--font-sans);background:var(--bg);color:var(--text);
+  line-height:1.6;min-height:100vh;font-size:15px;-webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+
+.shell{max-width:1080px;margin:0 auto;padding:32px 24px 80px}
+
+/* Header */
+.hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
+.hdr-left h1{font-size:20px;font-weight:600;letter-spacing:-.02em}
+.hdr-left .sub{font-size:13px;color:var(--text-muted);margin-top:2px}
+.hdr-right{display:flex;gap:8px;align-items:center}
+.hdr-btn{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  color:var(--text-muted);padding:5px 10px;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:5px;
+  transition:border-color .15s}
+.hdr-btn:hover{border-color:var(--text-muted)}
+.hdr-btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.5}
+
+/* Stat strip */
+.stats{display:flex;gap:24px;margin-bottom:28px;flex-wrap:wrap}
+.stat{display:flex;align-items:baseline;gap:6px}
+.stat .n{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums}
+.stat .l{font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em}
+.stat.merged .n{color:var(--teal)}
+.stat.open .n{color:var(--amber)}
+
+/* Filters */
+.filters{display:flex;gap:6px;margin-bottom:24px;flex-wrap:wrap;align-items:center}
+.pill{padding:3px 10px;border-radius:14px;font-size:12px;cursor:pointer;
+  background:transparent;border:1px solid var(--border);color:var(--text-muted);transition:all .15s;
+  white-space:nowrap}
+.pill:hover{border-color:var(--text-muted)}
+.pill.active{background:var(--amber);color:var(--bg);border-color:var(--amber)}
+.filter-sep{width:1px;height:16px;background:var(--border);margin:0 4px}
+.filter-select{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  color:var(--text);padding:3px 8px;font-size:12px;cursor:pointer}
+
+/* Heatmap */
+.section{margin-bottom:28px}
+.section-title{font-size:13px;font-weight:500;color:var(--text-muted);margin-bottom:10px;
+  text-transform:uppercase;letter-spacing:.05em}
+.heatmap-wrap{overflow-x:auto;padding-bottom:4px}
+.heatmap{display:flex;gap:3px}
+.heatmap-week{display:flex;flex-direction:column;gap:3px}
+.heatmap-day{width:14px;height:14px;border-radius:2px;background:var(--hm-0);cursor:pointer;
+  transition:outline-color .1s}
+.heatmap-day.future{background:transparent;cursor:default}
+.heatmap-day.pre-join{background:var(--hm-pre);cursor:default}
+.heatmap-day.l1{background:var(--hm-1)}.heatmap-day.l2{background:var(--hm-2)}
+.heatmap-day.l3{background:var(--hm-3)}.heatmap-day.l4{background:var(--hm-4)}
+.heatmap-day:not(.future):not(.pre-join):hover{outline:1.5px solid var(--amber);outline-offset:1px}
+.heatmap-day.selected{outline:2px solid var(--amber);outline-offset:1px}
+.hm-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:10px;color:var(--text-dim)}
+.hm-legend{display:flex;gap:3px;align-items:center;font-size:10px;color:var(--text-dim)}
+.hm-legend .sw{width:12px;height:12px;border-radius:2px}
+
+/* Day detail popover */
+.day-detail{background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  padding:12px 14px;margin-top:10px;display:none;max-height:260px;overflow-y:auto}
+.day-detail.open{display:block}
+.day-detail .dd-title{font-size:13px;font-weight:500;margin-bottom:8px;display:flex;
+  justify-content:space-between;align-items:center}
+.day-detail .dd-title span{color:var(--text-dim);font-weight:400}
+.day-detail .dd-close{cursor:pointer;color:var(--text-dim);font-size:16px;line-height:1}
+.day-detail .dd-close:hover{color:var(--text)}
+.dd-item{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--border);
+  font-size:13px}
+.dd-item:last-child{border:none}
+.dd-item .dd-badge{display:inline-block;width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.dd-item .dd-badge.merged{background:var(--teal)}.dd-item .dd-badge.open{background:var(--amber)}
+.dd-item .dd-badge.closed{background:var(--stone)}
+.dd-item a{color:var(--text);text-decoration:none}.dd-item a:hover{color:var(--amber)}
+.dd-item .dd-repo{color:var(--text-dim);font-size:11px;margin-left:auto;flex-shrink:0}
+.dd-empty{color:var(--text-dim);font-size:13px;padding:4px 0}
+
+/* Charts row */
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px}
+@media(max-width:700px){.charts{grid-template-columns:1fr}}
+
+.chart-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+.chart-card .section-title{margin-bottom:8px}
+
+.bar-chart{display:flex;flex-direction:column;gap:5px}
+.bar-row{display:flex;align-items:center;gap:8px;font-size:12px}
+.bar-label{width:170px;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  flex-shrink:0;color:var(--text-muted)}
+.bar-track{flex:1;height:18px;background:var(--surface-2);border-radius:3px;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;background:var(--amber);opacity:.7;transition:width .3s}
+.bar-count{width:28px;text-align:right;font-variant-numeric:tabular-nums;color:var(--text-dim);font-size:11px}
+
+.month-chart{display:flex;align-items:flex-end;gap:4px;height:110px;min-width:fit-content}
+.month-col{display:flex;flex-direction:column;align-items:center;flex:1;min-width:32px}
+.month-bar-wrap{width:20px;display:flex;flex-direction:column;justify-content:flex-end;flex:1}
+.month-bar{border-radius:3px 3px 0 0;min-height:2px;background:var(--amber);opacity:.7;cursor:default}
+.month-bar:hover{opacity:1}
+.month-num{font-size:10px;color:var(--text-dim);margin-top:4px;font-variant-numeric:tabular-nums}
+.month-lbl{font-size:10px;color:var(--text-dim);margin-top:1px}
+
+/* Table */
+.table-controls{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
+.table-input{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  color:var(--text);padding:5px 10px;font-size:12px;outline:none;flex:1;min-width:180px}
+.table-input:focus{border-color:var(--amber)}
+.table-input::placeholder{color:var(--text-dim)}
+.tbl-count{font-size:11px;color:var(--text-dim);margin-left:auto}
+.table-wrap{border:1px solid var(--border);border-radius:8px;background:var(--surface);
+  max-height:520px;overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+thead{position:sticky;top:0;background:var(--surface);z-index:1}
+th{text-align:left;padding:7px 12px;font-weight:500;border-bottom:1px solid var(--border);
+  color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;
+  user-select:none;white-space:nowrap}
+th:hover{color:var(--text-muted)}
+th .sa{margin-left:3px;font-size:9px}
+td{padding:6px 12px;border-bottom:1px solid var(--border);vertical-align:middle}
+tr:hover td{background:var(--surface-2)}
+.badge{display:inline-block;padding:1px 7px;border-radius:10px;font-size:10px;font-weight:500}
+.badge.merged{background:var(--teal-muted);color:var(--teal)}
+.badge.open{background:var(--amber-muted);color:var(--amber)}
+.badge.closed{background:var(--stone-muted);color:var(--stone)}
+td a{color:var(--text);text-decoration:none}
+td a:hover{color:var(--amber)}
+.empty-row{text-align:center;padding:32px;color:var(--text-dim)}
+
+/* Settings panel */
+.settings-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;display:none;
+  justify-content:flex-end}
+.settings-overlay.open{display:flex}
+.settings-panel{width:360px;max-width:90vw;background:var(--bg);border-left:1px solid var(--border);
+  padding:24px;overflow-y:auto;display:flex;flex-direction:column;gap:20px}
+.sp-title{font-size:16px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.sp-close{cursor:pointer;color:var(--text-dim);font-size:20px}.sp-close:hover{color:var(--text)}
+.sp-section{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-dim);
+  margin-bottom:6px}
+.sp-org{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:10px 12px;display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.sp-org .name{font-size:13px;font-weight:500}.sp-org .joined{font-size:11px;color:var(--text-dim)}
+.sp-help{font-size:12px;color:var(--text-muted);line-height:1.6}
+.sp-help a{color:var(--amber)}
+.sp-help code{background:var(--surface);padding:1px 5px;border-radius:3px;font-size:11px}
+.sp-note{font-size:11px;color:var(--text-dim);line-height:1.5;padding:10px 12px;
+  background:var(--surface);border-radius:var(--radius);border:1px solid var(--border)}
+
+.footer{text-align:center;font-size:11px;color:var(--text-dim);margin-top:40px;
+  padding-top:16px;border-top:1px solid var(--border)}
+
+@media(max-width:640px){
+  .shell{padding:20px 16px 60px}
+  .bar-label{width:100px;font-size:11px}
+  .stats{gap:16px}.stat .n{font-size:18px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<div class="hdr">
+  <div class="hdr-left">
+    <h1>PR Tracker</h1>
+    <div class="sub">@AishwaryaDV &middot; 2026-08-04 to 2026-08-21 &middot; Updated Aug 23, 2026</div>
+  </div>
+  <div class="hdr-right">
+    <button class="hdr-btn" onclick="openSettings()">
+      <svg viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 00-2 2v.18a2 2 0 01-1 1.73l-.43.25a2 2 0 01-2 0l-.15-.08a2 2 0 00-2.73.73l-.22.38a2 2 0 00.73 2.73l.15.1a2 2 0 011 1.72v.51a2 2 0 01-1 1.74l-.15.09a2 2 0 00-.73 2.73l.22.38a2 2 0 002.73.73l.15-.08a2 2 0 012 0l.43.25a2 2 0 011 1.73V20a2 2 0 002 2h.44a2 2 0 002-2v-.18a2 2 0 011-1.73l.43-.25a2 2 0 012 0l.15.08a2 2 0 002.73-.73l.22-.39a2 2 0 00-.73-2.73l-.15-.08a2 2 0 01-1-1.74v-.5a2 2 0 011-1.74l.15-.09a2 2 0 00.73-2.73l-.22-.38a2 2 0 00-2.73-.73l-.15.08a2 2 0 01-2 0l-.43-.25a2 2 0 01-1-1.73V4a2 2 0 00-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+      Settings
+    </button>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><span class="n" id="sTotal">55</span><span class="l">PRs</span></div>
+  <div class="stat merged"><span class="n" id="sMerged">43</span><span class="l">merged</span></div>
+  <div class="stat open"><span class="n" id="sOpen">2</span><span class="l">open</span></div>
+  <div class="stat"><span class="n" id="sRepos">7</span><span class="l">repos</span></div>
+</div>
+
+<div class="filters" id="filters">
+  <div class="pill active" data-org="all">All orgs</div>
+  <div class="pill" data-org="Orion-Sleep">Orion</div>
+  <div class="filter-sep"></div>
+  <select class="filter-select" id="yearFilter"><option value="all">All years</option></select>
+  <select class="filter-select" id="monthFilter"><option value="all">All months</option></select>
+</div>
+
+<div class="section">
+  <div class="section-title">Contributions</div>
+  <div class="heatmap-wrap"><div class="heatmap" id="heatmap"></div></div>
+  <div class="hm-labels">
+    <span>Joined 2026-08-01</span>
+    <div class="hm-legend">
+      <span>Less</span>
+      <div class="sw" style="background:var(--hm-0)"></div>
+      <div class="sw" style="background:var(--hm-1)"></div>
+      <div class="sw" style="background:var(--hm-2)"></div>
+      <div class="sw" style="background:var(--hm-3)"></div>
+      <div class="sw" style="background:var(--hm-4)"></div>
+      <span>More</span>
+    </div>
+  </div>
+  <div class="day-detail" id="dayDetail">
+    <div class="dd-title">
+      <span id="ddDate"></span>
+      <span class="dd-close" id="ddClose">&times;</span>
+    </div>
+    <div id="ddBody"></div>
+  </div>
+</div>
+
+<div class="charts">
+  <div class="chart-card">
+    <div class="section-title">Repositories <span id="repoCount" style="font-weight:400"></span></div>
+    <div class="bar-chart" id="repoChart"></div>
+  </div>
+  <div class="chart-card">
+    <div class="section-title">Monthly</div>
+    <div class="month-chart" id="monthChart"></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">All Pull Requests <span id="tblCount" style="font-weight:400"></span></div>
+  <div class="table-controls">
+    <input type="text" class="table-input" id="searchInput" placeholder="Search by title or repo...">
+    <select class="filter-select" id="stateFilter">
+      <option value="all">All states</option>
+      <option value="merged">Merged</option>
+      <option value="open">Open</option>
+      <option value="closed">Closed</option>
+    </select>
+    <select class="filter-select" id="repoFilter">
+      <option value="all">All repos</option>
+      <option value="orion-data-studio-web">orion-data-studio-web</option><option value="orion-admin-studio-networking">orion-admin-studio-networking</option><option value="orion-admin-studio-web">orion-admin-studio-web</option><option value="orion-admin-studio-components">orion-admin-studio-components</option><option value="orion-sales-studio-web">orion-sales-studio-web</option><option value="orion-command-center-web">orion-command-center-web</option><option value="orion-web">orion-web</option>
+    </select>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th data-sort="created">Date <span class="sa">&#9660;</span></th>
+        <th data-sort="repo">Repo</th>
+        <th data-sort="title">Title</th>
+        <th data-sort="state">State</th>
+      </tr></thead>
+      <tbody id="tblBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="footer">
+  Auto-updated weekly &middot; <a href="https://github.com/AishwaryaDV/pr-tracker" style="color:var(--text-dim)">Source</a>
+</div>
+
+</div><!-- .shell -->
+
+<!-- Settings panel -->
+<div class="settings-overlay" id="settingsOverlay">
+  <div class="settings-panel">
+    <div class="sp-title">Settings <span class="sp-close" onclick="closeSettings()">&times;</span></div>
+
+    <div>
+      <div class="sp-section">Tracked Organizations</div>
+      <div class="sp-org"><div><div class="name">Orion</div><div class="joined">Joined 2026-08-01 &middot; Orion-Sleep</div></div></div>
+    </div>
+
+    <div>
+      <div class="sp-section">Add an Organization</div>
+      <div class="sp-help">
+        <p>Option 1: Run the <a href="https://github.com/AishwaryaDV/pr-tracker/actions/workflows/manage-orgs.yml" target="_blank">Manage Orgs</a> workflow from GitHub Actions. Fill in the org name, label, and join date.</p>
+        <br>
+        <p>Option 2: Edit <a href="https://github.com/AishwaryaDV/pr-tracker/edit/main/config.json" target="_blank">config.json</a> directly on GitHub. Add a new entry to the <code>orgs</code> array.</p>
+        <br>
+        <p>After adding, run the <a href="https://github.com/AishwaryaDV/pr-tracker/actions/workflows/track-prs.yml" target="_blank">Track PRs</a> workflow with <code>full_backfill: true</code> to fetch historical data.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="sp-section">If removed from an org</div>
+      <div class="sp-note">
+        All previously fetched data stays in the repo forever. Future fetches will return empty for that org, but your historical record is preserved. No data is ever deleted.
+      </div>
+    </div>
+
+    <div>
+      <div class="sp-section">PAT Token</div>
+      <div class="sp-help">
+        The <code>ORG_PAT</code> secret in <a href="https://github.com/AishwaryaDV/pr-tracker/settings/secrets/actions" target="_blank">repo settings</a> needs read access to the org's repos. Update it if you add a new org or rotate tokens.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const ALL_PRS = [{"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "feat(device-support): temperature history from ClickHouse", "number": 26, "state": "merged", "created": "2026-08-21", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/26"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "feat(schedule): temperature telemetry overlay on device schedule chart", "number": 80, "state": "open", "created": "2026-08-21", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/80"}, {"repo": "orion-admin-studio-web", "org": "Orion-Sleep", "title": "fix: remove 0.3.0 workarounds, upgrade to components 0.3.1", "number": 19, "state": "merged", "created": "2026-08-21", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/19"}, {"repo": "orion-admin-studio-components", "org": "Orion-Sleep", "title": "fix: restore input style exports and Sheet showClose prop", "number": 4, "state": "merged", "created": "2026-08-21", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/4"}, {"repo": "orion-admin-studio-web", "org": "Orion-Sleep", "title": "Migrate to @orionsleep/admin-studio-components 0.3.0", "number": 17, "state": "merged", "created": "2026-08-20", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/17"}, {"repo": "orion-sales-studio-web", "org": "Orion-Sleep", "title": "fix(meetings): reduce header-to-content gap to match data studio", "number": 373, "state": "merged", "created": "2026-08-20", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/373"}, {"repo": "orion-sales-studio-web", "org": "Orion-Sleep", "title": "fix(deals): match header-to-table gap with other pages", "number": 372, "state": "closed", "created": "2026-08-20", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/372"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "perf: Lighthouse performance pass \u2014 devices, customer detail, app-wide", "number": 79, "state": "open", "created": "2026-08-20", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/79"}, {"repo": "orion-admin-studio-web", "org": "Orion-Sleep", "title": "perf: lazy-load global search palette on first open", "number": 16, "state": "merged", "created": "2026-08-19", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/16"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "feat: add internal_removed user type support", "number": 19, "state": "merged", "created": "2026-08-19", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/19"}, {"repo": "orion-admin-studio-web", "org": "Orion-Sleep", "title": "feat(users): add internal_removed role to users list", "number": 14, "state": "merged", "created": "2026-08-19", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/14"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "refactor: performance improvements", "number": 77, "state": "merged", "created": "2026-08-18", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/77"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "fix(infrastructure): adjust topology canvas fit to prevent clipping", "number": 76, "state": "closed", "created": "2026-08-18", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/76"}, {"repo": "orion-web", "org": "Orion-Sleep", "title": "feat: add email sign-up flow", "number": 116, "state": "merged", "created": "2026-08-17", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-web/pull/116"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "fix: ClickHouse query syntax in devices-status endpoint", "number": 15, "state": "merged", "created": "2026-08-17", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/15"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "fix(devices-status): correct column names and table joins", "number": 14, "state": "merged", "created": "2026-08-17", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/14"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "feat(devices): add fleet status aggregate endpoint", "number": 13, "state": "merged", "created": "2026-08-17", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/13"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "fix(devices): selection bar, Intercom badge, status bar, infrastructure canvas", "number": 75, "state": "merged", "created": "2026-08-17", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/75"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "fix(infrastructure): staging row clipped in topology diagram", "number": 73, "state": "merged", "created": "2026-08-17", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/73"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "test: Aishwarya PR-flow verification (empty commit)", "number": 70, "state": "closed", "created": "2026-08-15", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/70"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "feat(intercom): add support conversation handler for customer detail", "number": 11, "state": "merged", "created": "2026-08-14", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/11"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "feat(customers): Intercom support tab on customer detail", "number": 67, "state": "closed", "created": "2026-08-14", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/67"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "fix(customers): always show all tabs + sync active tab to query param", "number": 65, "state": "merged", "created": "2026-08-14", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/65"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "fix(theme): prevent light-mode flash on CSR pages during refresh", "number": 64, "state": "merged", "created": "2026-08-14", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/64"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "feat(sleep-sessions): consumer-style filters for admin insights", "number": 9, "state": "closed", "created": "2026-08-14", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/9"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "fix(BedDiagram): show offline scrim and badge on bed diagram", "number": 62, "state": "merged", "created": "2026-08-14", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/62"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "fix(devices): device support page UI fixes", "number": 59, "state": "merged", "created": "2026-08-13", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/59"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "fix(login): respect light mode theme on login screen", "number": 57, "state": "merged", "created": "2026-08-13", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/57"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "Add device timeline feed to Overview tab", "number": 55, "state": "closed", "created": "2026-08-13", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/55"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "Add device timeline query and handler", "number": 8, "state": "merged", "created": "2026-08-13", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/8"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "Device detail: direct DB reads + per-person filter", "number": 54, "state": "merged", "created": "2026-08-13", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/54"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "feat: device admin detail queries + per-MAC events", "number": 7, "state": "merged", "created": "2026-08-13", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/7"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "Redesign schedule graph with temperature-gradient curves", "number": 44, "state": "merged", "created": "2026-08-12", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/44"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "feat(customers): add getCustomerAllSubscriptions for orphaned subs", "number": 6, "state": "merged", "created": "2026-08-12", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/6"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "feat: wire customer detail tabs to real DB endpoints", "number": 38, "state": "closed", "created": "2026-08-12", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/38"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "fix(intelligence): fall back to legacy row-level fields when phase_changes is empty", "number": 5, "state": "merged", "created": "2026-08-12", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/5"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "feat: add customer detail tab queries (schedule, subscription, orders, intelligence)", "number": 4, "state": "merged", "created": "2026-08-12", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/4"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "refactor: migrate UI component imports to shared package (batch 2)", "number": 33, "state": "merged", "created": "2026-08-12", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/33"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "feat(customers): real DB endpoints for customer detail tabs", "number": 31, "state": "closed", "created": "2026-08-12", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/31"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "refactor: convert payload panels to tabs and fix raw text selection", "number": 30, "state": "merged", "created": "2026-08-12", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/30"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "feat: migrate UI component imports to @orionsleep/admin-studio-components", "number": 27, "state": "merged", "created": "2026-08-11", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/27"}, {"repo": "orion-admin-studio-components", "org": "Orion-Sleep", "title": "fix: preserve pendingDate time and close behavior in DateTimePickerPopover", "number": 2, "state": "merged", "created": "2026-08-11", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/2"}, {"repo": "orion-admin-studio-components", "org": "Orion-Sleep", "title": "feat: add missing UI primitives from data-studio", "number": 1, "state": "merged", "created": "2026-08-11", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/1"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "feat: migrate BFF infra to @orionsleep/admin-studio-network", "number": 24, "state": "merged", "created": "2026-08-11", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/24"}, {"repo": "orion-admin-studio-networking", "org": "Orion-Sleep", "title": "feat: add data-studio domain queries and row types", "number": 1, "state": "merged", "created": "2026-08-11", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/1"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "feat: customer detail left-side cards \u2014 direct Postgres reads", "number": 21, "state": "merged", "created": "2026-08-11", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/21"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "UI sync with admin-studio (part 2)", "number": 20, "state": "merged", "created": "2026-08-11", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/20"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "style: sync UI with admin-studio design system", "number": 18, "state": "merged", "created": "2026-08-11", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/18"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "feat: customer detail \u2014 card UI slim-down + BFF migration", "number": 17, "state": "closed", "created": "2026-08-11", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/17"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "style: slim down cards, surface-card elevation, thin scrollbar", "number": 16, "state": "closed", "created": "2026-08-11", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/16"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "style: import admin-studio theme \u2014 shell chrome, buttons, studio switcher", "number": 15, "state": "merged", "created": "2026-08-11", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/15"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "refactor: migrate BFF GET routes to direct Postgres reads", "number": 11, "state": "merged", "created": "2026-08-10", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/11"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "feat(firmware): Option A flowchart layout \u2014 combined firmware page", "number": 8, "state": "merged", "created": "2026-08-07", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/8"}, {"repo": "orion-data-studio-web", "org": "Orion-Sleep", "title": "UI/UX overhaul: Slate theme, flat layouts, semantic tokens", "number": 7, "state": "merged", "created": "2026-08-06", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/7"}, {"repo": "orion-command-center-web", "org": "Orion-Sleep", "title": "feat(users): add copy permissions feature to edit user flow", "number": 413, "state": "merged", "created": "2026-08-04", "month": "2026-08", "url": "https://github.com/Orion-Sleep/orion-command-center-web/pull/413"}];
+const HEATMAP = [[{"date": "2026-05-25", "count": 0, "future": false, "preJoin": true}, {"date": "2026-05-26", "count": 0, "future": false, "preJoin": true}, {"date": "2026-05-27", "count": 0, "future": false, "preJoin": true}, {"date": "2026-05-28", "count": 0, "future": false, "preJoin": true}, {"date": "2026-05-29", "count": 0, "future": false, "preJoin": true}, {"date": "2026-05-30", "count": 0, "future": false, "preJoin": true}, {"date": "2026-05-31", "count": 0, "future": false, "preJoin": true}], [{"date": "2026-06-01", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-02", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-03", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-04", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-05", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-06", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-07", "count": 0, "future": false, "preJoin": true}], [{"date": "2026-06-08", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-09", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-10", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-11", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-12", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-13", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-14", "count": 0, "future": false, "preJoin": true}], [{"date": "2026-06-15", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-16", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-17", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-18", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-19", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-20", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-21", "count": 0, "future": false, "preJoin": true}], [{"date": "2026-06-22", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-23", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-24", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-25", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-26", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-27", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-28", "count": 0, "future": false, "preJoin": true}], [{"date": "2026-06-29", "count": 0, "future": false, "preJoin": true}, {"date": "2026-06-30", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-01", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-02", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-03", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-04", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-05", "count": 0, "future": false, "preJoin": true}], [{"date": "2026-07-06", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-07", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-08", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-09", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-10", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-11", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-12", "count": 0, "future": false, "preJoin": true}], [{"date": "2026-07-13", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-14", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-15", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-16", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-17", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-18", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-19", "count": 0, "future": false, "preJoin": true}], [{"date": "2026-07-20", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-21", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-22", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-23", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-24", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-25", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-26", "count": 0, "future": false, "preJoin": true}], [{"date": "2026-07-27", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-28", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-29", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-30", "count": 0, "future": false, "preJoin": true}, {"date": "2026-07-31", "count": 0, "future": false, "preJoin": true}, {"date": "2026-08-01", "count": 0, "future": false, "preJoin": false}, {"date": "2026-08-02", "count": 0, "future": false, "preJoin": false}], [{"date": "2026-08-03", "count": 0, "future": false, "preJoin": false}, {"date": "2026-08-04", "count": 1, "future": false, "preJoin": false}, {"date": "2026-08-05", "count": 0, "future": false, "preJoin": false}, {"date": "2026-08-06", "count": 1, "future": false, "preJoin": false}, {"date": "2026-08-07", "count": 1, "future": false, "preJoin": false}, {"date": "2026-08-08", "count": 0, "future": false, "preJoin": false}, {"date": "2026-08-09", "count": 0, "future": false, "preJoin": false}], [{"date": "2026-08-10", "count": 1, "future": false, "preJoin": false}, {"date": "2026-08-11", "count": 11, "future": false, "preJoin": false}, {"date": "2026-08-12", "count": 8, "future": false, "preJoin": false}, {"date": "2026-08-13", "count": 6, "future": false, "preJoin": false}, {"date": "2026-08-14", "count": 6, "future": false, "preJoin": false}, {"date": "2026-08-15", "count": 1, "future": false, "preJoin": false}, {"date": "2026-08-16", "count": 0, "future": false, "preJoin": false}], [{"date": "2026-08-17", "count": 6, "future": false, "preJoin": false}, {"date": "2026-08-18", "count": 2, "future": false, "preJoin": false}, {"date": "2026-08-19", "count": 3, "future": false, "preJoin": false}, {"date": "2026-08-20", "count": 4, "future": false, "preJoin": false}, {"date": "2026-08-21", "count": 4, "future": false, "preJoin": false}, {"date": "2026-08-22", "count": 0, "future": false, "preJoin": false}, {"date": "2026-08-23", "count": 0, "future": false, "preJoin": false}]];
+
+let currentOrg = 'all';
+let currentYear = 'all';
+let currentMonth = 'all';
+let currentSort = {key:'created',dir:-1};
+let selectedDay = null;
+
+function filtered() {
+  return ALL_PRS.filter(p => {
+    if (currentOrg !== 'all' && p.org !== currentOrg) return false;
+    if (currentYear !== 'all' && p.created.slice(0,4) !== currentYear) return false;
+    if (currentMonth !== 'all' && p.month !== currentMonth) return false;
+    return true;
+  });
+}
+
+function updateStats() {
+  const prs = filtered();
+  document.getElementById('sTotal').textContent = prs.length;
+  document.getElementById('sMerged').textContent = prs.filter(p => p.state==='merged').length;
+  document.getElementById('sOpen').textContent = prs.filter(p => p.state==='open').length;
+  document.getElementById('sRepos').textContent = new Set(prs.map(p => p.repo)).size;
+}
+
+function populateYearMonth() {
+  const years = [...new Set(ALL_PRS.map(p => p.created.slice(0,4)))].sort();
+  const ys = document.getElementById('yearFilter');
+  ys.innerHTML = '<option value="all">All years</option>';
+  years.forEach(y => { ys.innerHTML += '<option value="'+y+'">'+y+'</option>'; });
+
+  updateMonthOptions();
+}
+
+function updateMonthOptions() {
+  const ms = document.getElementById('monthFilter');
+  const prev = ms.value;
+  let months;
+  if (currentYear !== 'all') {
+    months = [...new Set(ALL_PRS.filter(p => p.created.slice(0,4)===currentYear).map(p => p.month))].sort();
+  } else {
+    months = [...new Set(ALL_PRS.map(p => p.month))].sort();
+  }
+  const names = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  ms.innerHTML = '<option value="all">All months</option>';
+  months.forEach(m => {
+    const mi = parseInt(m.slice(5));
+    ms.innerHTML += '<option value="'+m+'">'+names[mi]+' '+m.slice(0,4)+'</option>';
+  });
+  if (months.includes(prev)) ms.value = prev;
+  else { ms.value = 'all'; currentMonth = 'all'; }
+}
+
+function renderHeatmap() {
+  const el = document.getElementById('heatmap');
+  el.innerHTML = '';
+  const prs = filtered();
+  const byDay = {};
+  prs.forEach(p => { byDay[p.created] = (byDay[p.created] || 0) + 1; });
+
+  HEATMAP.forEach(week => {
+    const col = document.createElement('div');
+    col.className = 'heatmap-week';
+    week.forEach(day => {
+      const d = document.createElement('div');
+      const count = byDay[day.date] || 0;
+      let cls = 'heatmap-day';
+      if (day.future) cls += ' future';
+      else if (day.preJoin) cls += ' pre-join';
+      else if (count === 0) {}
+      else if (count === 1) cls += ' l1';
+      else if (count === 2) cls += ' l2';
+      else if (count <= 4) cls += ' l3';
+      else cls += ' l4';
+      if (selectedDay === day.date) cls += ' selected';
+      d.className = cls;
+      d.dataset.date = day.date;
+      d.dataset.count = count;
+      d.title = count + ' PR' + (count !== 1 ? 's':'') + ' on ' + day.date;
+      if (!day.future && !day.preJoin) {
+        d.addEventListener('click', () => showDayDetail(day.date, byDay[day.date] || 0));
+      }
+      col.appendChild(d);
+    });
+    el.appendChild(col);
+  });
+}
+
+function showDayDetail(date, count) {
+  selectedDay = date;
+  renderHeatmap();
+  const panel = document.getElementById('dayDetail');
+  const body = document.getElementById('ddBody');
+  document.getElementById('ddDate').textContent = date + ' — ' + count + ' PR' + (count !== 1 ? 's':'');
+
+  const dayPrs = filtered().filter(p => p.created === date);
+  if (!dayPrs.length) {
+    body.innerHTML = '<div class="dd-empty">No PRs on this day</div>';
+  } else {
+    body.innerHTML = dayPrs.map(p =>
+      '<div class="dd-item">' +
+        '<span class="dd-badge ' + p.state + '"></span>' +
+        '<a href="' + p.url + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>' +
+        '<span class="dd-repo">' + p.repo + '</span>' +
+      '</div>'
+    ).join('');
+  }
+  panel.classList.add('open');
+}
+
+document.getElementById('ddClose').addEventListener('click', () => {
+  document.getElementById('dayDetail').classList.remove('open');
+  selectedDay = null;
+  renderHeatmap();
+});
+
+function renderRepoChart() {
+  const el = document.getElementById('repoChart');
+  el.innerHTML = '';
+  const prs = filtered();
+  const byRepo = {};
+  prs.forEach(p => { if (!byRepo[p.repo]) byRepo[p.repo]=0; byRepo[p.repo]++; });
+  const sorted = Object.entries(byRepo).sort((a,b) => b[1]-a[1]);
+  const max = sorted.length ? sorted[0][1] : 1;
+  document.getElementById('repoCount').textContent = '(' + sorted.length + ')';
+  sorted.forEach(([repo,count]) => {
+    const row = document.createElement('div');
+    row.className = 'bar-row';
+    row.innerHTML =
+      '<span class="bar-label">' + repo + '</span>' +
+      '<div class="bar-track"><div class="bar-fill" style="width:' + (count/max*100) + '%"></div></div>' +
+      '<span class="bar-count">' + count + '</span>';
+    el.appendChild(row);
+  });
+}
+
+function renderMonthChart() {
+  const el = document.getElementById('monthChart');
+  el.innerHTML = '';
+  const prs = filtered();
+  const byMonth = {};
+  prs.forEach(p => { const m=p.month; if(!byMonth[m])byMonth[m]=0; byMonth[m]++; });
+  const months = Object.keys(byMonth).sort();
+  const max = Math.max(...Object.values(byMonth),1);
+  const names = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  months.forEach(m => {
+    const count = byMonth[m];
+    const col = document.createElement('div');
+    col.className = 'month-col';
+    const mi = parseInt(m.slice(5))-1;
+    col.innerHTML =
+      '<div class="month-bar-wrap">' +
+        '<div class="month-bar" style="height:' + (count/max*100) + '%" title="' + names[mi]+' '+m.slice(0,4)+': '+count+' PRs"></div>' +
+      '</div>' +
+      '<div class="month-num">' + count + '</div>' +
+      '<div class="month-lbl">' + names[mi] + '</div>';
+    el.appendChild(col);
+  });
+}
+
+function renderTable() {
+  const tbody = document.getElementById('tblBody');
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const stateF = document.getElementById('stateFilter').value;
+  const repoF = document.getElementById('repoFilter').value;
+  let prs = filtered().filter(p => {
+    if (stateF !== 'all' && p.state !== stateF) return false;
+    if (repoF !== 'all' && p.repo !== repoF) return false;
+    if (search && !p.title.toLowerCase().includes(search) && !p.repo.toLowerCase().includes(search)) return false;
+    return true;
+  });
+  prs.sort((a,b) => {
+    const av = a[currentSort.key]||'', bv = b[currentSort.key]||'';
+    return av < bv ? -currentSort.dir : av > bv ? currentSort.dir : 0;
+  });
+  document.getElementById('tblCount').textContent = '(' + prs.length + ')';
+  tbody.innerHTML = prs.slice(0,300).map(p =>
+    '<tr>' +
+      '<td style="white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--text-muted)">' + p.created + '</td>' +
+      '<td style="color:var(--text-dim)">' + p.repo + '</td>' +
+      '<td><a href="' + p.url + '" target="_blank" rel="noopener">' + esc(p.title) + '</a> <span style="color:var(--text-dim)">#' + p.number + '</span></td>' +
+      '<td><span class="badge ' + p.state + '">' + p.state + '</span></td>' +
+    '</tr>'
+  ).join('');
+  if (!prs.length) tbody.innerHTML = '<tr><td colspan="4" class="empty-row">No matching PRs</td></tr>';
+}
+
+function esc(s) { const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+function refresh() { updateStats(); renderHeatmap(); renderRepoChart(); renderMonthChart(); renderTable(); }
+
+document.querySelectorAll('.pill[data-org]').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('.pill[data-org]').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    currentOrg = pill.dataset.org;
+    refresh();
+  });
+});
+
+document.getElementById('yearFilter').addEventListener('change', e => {
+  currentYear = e.target.value;
+  updateMonthOptions();
+  refresh();
+});
+document.getElementById('monthFilter').addEventListener('change', e => {
+  currentMonth = e.target.value;
+  refresh();
+});
+
+document.querySelectorAll('th[data-sort]').forEach(th => {
+  th.addEventListener('click', () => {
+    const key = th.dataset.sort;
+    if (currentSort.key === key) currentSort.dir *= -1;
+    else currentSort = {key, dir: -1};
+    document.querySelectorAll('th .sa').forEach(a => a.textContent = '');
+    th.querySelector('.sa').textContent = currentSort.dir === -1 ? '\u25BC' : '\u25B2';
+    renderTable();
+  });
+});
+
+document.getElementById('searchInput').addEventListener('input', renderTable);
+document.getElementById('stateFilter').addEventListener('change', renderTable);
+document.getElementById('repoFilter').addEventListener('change', renderTable);
+
+function openSettings() { document.getElementById('settingsOverlay').classList.add('open'); }
+function closeSettings() { document.getElementById('settingsOverlay').classList.remove('open'); }
+document.getElementById('settingsOverlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeSettings();
+});
+
+populateYearMonth();
+refresh();
+</script>
+</body>
+</html>

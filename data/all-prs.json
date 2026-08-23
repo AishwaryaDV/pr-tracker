@@ -1,0 +1,772 @@
+[
+  {
+    "closedAt": "2026-08-21T13:50:57Z",
+    "createdAt": "2026-08-21T12:53:59Z",
+    "labels": [],
+    "number": 26,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(device-support): temperature history from ClickHouse",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/26",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-08-21T09:31:25Z",
+    "labels": [],
+    "number": 80,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "open",
+    "title": "feat(schedule): temperature telemetry overlay on device schedule chart",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/80",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-21T18:07:44Z",
+    "createdAt": "2026-08-21T05:33:37Z",
+    "labels": [],
+    "number": 19,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "merged",
+    "title": "fix: remove 0.3.0 workarounds, upgrade to components 0.3.1",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/19",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-21T07:28:52Z",
+    "createdAt": "2026-08-21T04:58:47Z",
+    "labels": [],
+    "number": 4,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "merged",
+    "title": "fix: restore input style exports and Sheet showClose prop",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/4",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-20T20:25:17Z",
+    "createdAt": "2026-08-20T18:49:17Z",
+    "labels": [],
+    "number": 17,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "merged",
+    "title": "Migrate to @orionsleep/admin-studio-components 0.3.0",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/17",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-21T06:08:58Z",
+    "createdAt": "2026-08-20T17:22:46Z",
+    "labels": [],
+    "number": 373,
+    "repository": {
+      "name": "orion-sales-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-sales-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(meetings): reduce header-to-content gap to match data studio",
+    "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/373",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-20T17:13:08Z",
+    "createdAt": "2026-08-20T17:07:16Z",
+    "labels": [],
+    "number": 372,
+    "repository": {
+      "name": "orion-sales-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-sales-studio-web"
+    },
+    "state": "closed",
+    "title": "fix(deals): match header-to-table gap with other pages",
+    "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/372",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-08-20T08:40:27Z",
+    "labels": [],
+    "number": 79,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "open",
+    "title": "perf: Lighthouse performance pass \u2014 devices, customer detail, app-wide",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/79",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-20T20:25:37Z",
+    "createdAt": "2026-08-19T19:57:30Z",
+    "labels": [],
+    "number": 16,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "merged",
+    "title": "perf: lazy-load global search palette on first open",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/16",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-19T11:00:59Z",
+    "createdAt": "2026-08-19T10:18:32Z",
+    "labels": [],
+    "number": 19,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat: add internal_removed user type support",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/19",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-19T13:32:16Z",
+    "createdAt": "2026-08-19T02:15:18Z",
+    "labels": [],
+    "number": 14,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(users): add internal_removed role to users list",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/14",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-20T07:05:47Z",
+    "createdAt": "2026-08-18T18:55:03Z",
+    "labels": [],
+    "number": 77,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "refactor: performance improvements",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/77",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-18T18:54:45Z",
+    "createdAt": "2026-08-18T16:54:45Z",
+    "labels": [],
+    "number": 76,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "fix(infrastructure): adjust topology canvas fit to prevent clipping",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/76",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-18T14:38:25Z",
+    "createdAt": "2026-08-17T19:02:55Z",
+    "labels": [],
+    "number": 116,
+    "repository": {
+      "name": "orion-web",
+      "nameWithOwner": "Orion-Sleep/orion-web"
+    },
+    "state": "merged",
+    "title": "feat: add email sign-up flow",
+    "url": "https://github.com/Orion-Sleep/orion-web/pull/116",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-17T11:15:30Z",
+    "createdAt": "2026-08-17T10:56:14Z",
+    "labels": [],
+    "number": 15,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "fix: ClickHouse query syntax in devices-status endpoint",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/15",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-17T10:30:19Z",
+    "createdAt": "2026-08-17T09:44:14Z",
+    "labels": [],
+    "number": 14,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "fix(devices-status): correct column names and table joins",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/14",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-17T09:41:33Z",
+    "createdAt": "2026-08-17T09:27:07Z",
+    "labels": [],
+    "number": 13,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(devices): add fleet status aggregate endpoint",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/13",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-17T19:17:21Z",
+    "createdAt": "2026-08-17T09:05:39Z",
+    "labels": [],
+    "number": 75,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(devices): selection bar, Intercom badge, status bar, infrastructure canvas",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/75",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-17T08:15:36Z",
+    "createdAt": "2026-08-17T07:18:05Z",
+    "labels": [],
+    "number": 73,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(infrastructure): staging row clipped in topology diagram",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/73",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-18T18:21:16Z",
+    "createdAt": "2026-08-15T09:55:27Z",
+    "labels": [],
+    "number": 70,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "test: Aishwarya PR-flow verification (empty commit)",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/70",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-14T16:24:02Z",
+    "createdAt": "2026-08-14T15:37:30Z",
+    "labels": [],
+    "number": 11,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(intercom): add support conversation handler for customer detail",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/11",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-16T15:04:01Z",
+    "createdAt": "2026-08-14T15:11:10Z",
+    "labels": [],
+    "number": 67,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "feat(customers): Intercom support tab on customer detail",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/67",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-14T14:39:46Z",
+    "createdAt": "2026-08-14T11:23:42Z",
+    "labels": [],
+    "number": 65,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(customers): always show all tabs + sync active tab to query param",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/65",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-14T11:51:01Z",
+    "createdAt": "2026-08-14T09:16:39Z",
+    "labels": [],
+    "number": 64,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(theme): prevent light-mode flash on CSR pages during refresh",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/64",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-14T08:50:52Z",
+    "createdAt": "2026-08-14T02:46:49Z",
+    "labels": [],
+    "number": 9,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "closed",
+    "title": "feat(sleep-sessions): consumer-style filters for admin insights",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/9",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-14T08:32:27Z",
+    "createdAt": "2026-08-14T02:31:59Z",
+    "labels": [],
+    "number": 62,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(BedDiagram): show offline scrim and badge on bed diagram",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/62",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-13T22:19:45Z",
+    "createdAt": "2026-08-13T19:16:02Z",
+    "labels": [],
+    "number": 59,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(devices): device support page UI fixes",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/59",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-13T15:49:31Z",
+    "createdAt": "2026-08-13T14:56:41Z",
+    "labels": [],
+    "number": 57,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(login): respect light mode theme on login screen",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/57",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-13T14:33:42Z",
+    "createdAt": "2026-08-13T12:27:31Z",
+    "labels": [],
+    "number": 55,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "Add device timeline feed to Overview tab",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/55",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-13T12:42:02Z",
+    "createdAt": "2026-08-13T12:08:18Z",
+    "labels": [],
+    "number": 8,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "Add device timeline query and handler",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/8",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-13T12:32:35Z",
+    "createdAt": "2026-08-13T10:16:21Z",
+    "labels": [],
+    "number": 54,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "Device detail: direct DB reads + per-person filter",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/54",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-13T09:22:04Z",
+    "createdAt": "2026-08-13T05:28:58Z",
+    "labels": [],
+    "number": 7,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat: device admin detail queries + per-MAC events",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/7",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-12T20:36:35Z",
+    "createdAt": "2026-08-12T18:19:17Z",
+    "labels": [],
+    "number": 44,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "Redesign schedule graph with temperature-gradient curves",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/44",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-12T17:29:53Z",
+    "createdAt": "2026-08-12T15:32:59Z",
+    "labels": [],
+    "number": 6,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(customers): add getCustomerAllSubscriptions for orphaned subs",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/6",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-12T17:09:23Z",
+    "createdAt": "2026-08-12T11:26:18Z",
+    "labels": [],
+    "number": 38,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "feat: wire customer detail tabs to real DB endpoints",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/38",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-12T11:03:59Z",
+    "createdAt": "2026-08-12T10:37:35Z",
+    "labels": [],
+    "number": 5,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "fix(intelligence): fall back to legacy row-level fields when phase_changes is empty",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/5",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-12T10:31:55Z",
+    "createdAt": "2026-08-12T10:08:44Z",
+    "labels": [],
+    "number": 4,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat: add customer detail tab queries (schedule, subscription, orders, intelligence)",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/4",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-12T09:41:23Z",
+    "createdAt": "2026-08-12T08:06:42Z",
+    "labels": [],
+    "number": 33,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "refactor: migrate UI component imports to shared package (batch 2)",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/33",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-12T17:36:43Z",
+    "createdAt": "2026-08-12T06:46:25Z",
+    "labels": [],
+    "number": 31,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "feat(customers): real DB endpoints for customer detail tabs",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/31",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-12T06:43:43Z",
+    "createdAt": "2026-08-12T04:02:27Z",
+    "labels": [],
+    "number": 30,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "refactor: convert payload panels to tabs and fix raw text selection",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/30",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-12T06:36:42Z",
+    "createdAt": "2026-08-11T19:57:05Z",
+    "labels": [],
+    "number": 27,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat: migrate UI component imports to @orionsleep/admin-studio-components",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/27",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-11T18:58:06Z",
+    "createdAt": "2026-08-11T18:14:48Z",
+    "labels": [],
+    "number": 2,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "merged",
+    "title": "fix: preserve pendingDate time and close behavior in DateTimePickerPopover",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/2",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-11T17:50:02Z",
+    "createdAt": "2026-08-11T17:15:35Z",
+    "labels": [],
+    "number": 1,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "merged",
+    "title": "feat: add missing UI primitives from data-studio",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/1",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-12T06:31:22Z",
+    "createdAt": "2026-08-11T14:50:23Z",
+    "labels": [],
+    "number": 24,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat: migrate BFF infra to @orionsleep/admin-studio-network",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/24",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-11T14:04:59Z",
+    "createdAt": "2026-08-11T13:53:43Z",
+    "labels": [],
+    "number": 1,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat: add data-studio domain queries and row types",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/1",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-11T11:52:45Z",
+    "createdAt": "2026-08-11T10:32:32Z",
+    "labels": [],
+    "number": 21,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat: customer detail left-side cards \u2014 direct Postgres reads",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/21",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-11T10:50:15Z",
+    "createdAt": "2026-08-11T09:25:32Z",
+    "labels": [],
+    "number": 20,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "UI sync with admin-studio (part 2)",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/20",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-11T08:03:48Z",
+    "createdAt": "2026-08-11T06:59:40Z",
+    "labels": [],
+    "number": 18,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "style: sync UI with admin-studio design system",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/18",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-11T06:58:32Z",
+    "createdAt": "2026-08-11T06:45:30Z",
+    "labels": [],
+    "number": 17,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "feat: customer detail \u2014 card UI slim-down + BFF migration",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/17",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-11T06:45:01Z",
+    "createdAt": "2026-08-11T06:44:14Z",
+    "labels": [],
+    "number": 16,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "style: slim down cards, surface-card elevation, thin scrollbar",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/16",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-11T06:23:50Z",
+    "createdAt": "2026-08-11T04:52:55Z",
+    "labels": [],
+    "number": 15,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "style: import admin-studio theme \u2014 shell chrome, buttons, studio switcher",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/15",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-10T17:49:34Z",
+    "createdAt": "2026-08-10T14:26:57Z",
+    "labels": [],
+    "number": 11,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "refactor: migrate BFF GET routes to direct Postgres reads",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/11",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-10T09:51:47Z",
+    "createdAt": "2026-08-07T14:39:19Z",
+    "labels": [],
+    "number": 8,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(firmware): Option A flowchart layout \u2014 combined firmware page",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/8",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-07T19:43:47Z",
+    "createdAt": "2026-08-06T06:02:10Z",
+    "labels": [],
+    "number": 7,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "UI/UX overhaul: Slate theme, flat layouts, semantic tokens",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/7",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-07T06:54:33Z",
+    "createdAt": "2026-08-04T06:50:09Z",
+    "labels": [],
+    "number": 413,
+    "repository": {
+      "name": "orion-command-center-web",
+      "nameWithOwner": "Orion-Sleep/orion-command-center-web"
+    },
+    "state": "merged",
+    "title": "feat(users): add copy permissions feature to edit user flow",
+    "url": "https://github.com/Orion-Sleep/orion-command-center-web/pull/413",
+    "org": "Orion-Sleep"
+  }
+]
