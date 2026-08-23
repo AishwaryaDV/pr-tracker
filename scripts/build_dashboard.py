@@ -39,10 +39,10 @@ def build_heatmap_data(prs, earliest_join):
 
     today = datetime.now(timezone.utc).date()
     join = datetime.strptime(earliest_join, "%Y-%m-%d").date()
-    start = join - timedelta(days=join.weekday())
+    start = join - timedelta(days=join.isoweekday() % 7)
     min_weeks = 12
     if (today - start).days < min_weeks * 7:
-        start = today - timedelta(weeks=min_weeks) - timedelta(days=today.weekday())
+        start = today - timedelta(weeks=min_weeks) - timedelta(days=today.isoweekday() % 7)
 
     weeks = []
     current = start
@@ -126,20 +126,26 @@ def main():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{config["dashboard"]["title"]}</title>
 <style>
+@font-face{{font-family:'Geist';src:url('fonts/Geist-Variable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}}
+@font-face{{font-family:'Geist Mono';src:url('fonts/GeistMono-Variable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}}
 *,*::before,*::after{{box-sizing:border-box;margin:0;padding:0}}
 :root{{
-  --bg:#111318;--surface:#191c25;--surface-2:#20242f;--border:#282d3a;
-  --text:#c8cdd8;--text-muted:#6b7189;--text-dim:#3f445a;
-  --amber:#c9953c;--amber-muted:rgba(201,149,60,.12);
-  --teal:#4daa8f;--teal-muted:rgba(77,170,143,.12);
-  --stone:#8b7e74;--stone-muted:rgba(139,126,116,.12);
-  --coral:#c25d52;
-  --hm-0:#191c25;--hm-1:#2e2518;--hm-2:#4a3a1a;--hm-3:#7a5f20;--hm-4:#c9953c;
-  --hm-pre:#13151b;
+  --font-sans:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-mono:'Geist Mono',ui-monospace,SFMono-Regular,monospace;
+  --bg:#1c1917;--surface:#231f1c;--surface-2:#2a2522;--border:rgba(245,240,235,.1);
+  --border-strong:rgba(245,240,235,.2);
+  --text:#f5f0eb;--text-muted:#a8a29e;--text-dim:#57534e;
+  --accent:#f5f0eb;
+  --teal:#6ec6a5;--teal-muted:rgba(110,198,165,.12);
+  --amber:#d4a843;--amber-muted:rgba(212,168,67,.12);
+  --stone:#a8a29e;--stone-muted:rgba(168,162,158,.1);
+  --hm-0:#231f1c;--hm-1:#302818;--hm-2:#4d3e1c;--hm-3:#7a6224;--hm-4:#d4a843;
+  --hm-pre:#171412;
   --radius:6px;
 }}
-body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-  background:var(--bg);color:var(--text);line-height:1.5;min-height:100vh}}
+body{{font-family:var(--font-sans);background:var(--bg);color:var(--text);
+  line-height:1.6;min-height:100vh;font-size:15px;-webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}}
 
 .shell{{max-width:1080px;margin:0 auto;padding:32px 24px 80px}}
 
@@ -177,18 +183,22 @@ body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sa
 .section{{margin-bottom:28px}}
 .section-title{{font-size:13px;font-weight:500;color:var(--text-muted);margin-bottom:10px;
   text-transform:uppercase;letter-spacing:.05em}}
-.heatmap-wrap{{overflow-x:auto;padding-bottom:4px}}
-.heatmap{{display:flex;gap:3px}}
-.heatmap-week{{display:flex;flex-direction:column;gap:3px}}
-.heatmap-day{{width:14px;height:14px;border-radius:2px;background:var(--hm-0);cursor:pointer;
-  transition:outline-color .1s}}
-.heatmap-day.future{{background:transparent;cursor:default}}
-.heatmap-day.pre-join{{background:var(--hm-pre);cursor:default}}
-.heatmap-day.l1{{background:var(--hm-1)}}.heatmap-day.l2{{background:var(--hm-2)}}
-.heatmap-day.l3{{background:var(--hm-3)}}.heatmap-day.l4{{background:var(--hm-4)}}
-.heatmap-day:not(.future):not(.pre-join):hover{{outline:1.5px solid var(--amber);outline-offset:1px}}
-.heatmap-day.selected{{outline:2px solid var(--amber);outline-offset:1px}}
-.hm-labels{{display:flex;justify-content:space-between;margin-top:6px;font-size:10px;color:var(--text-dim)}}
+.hm-graph{{display:flex}}
+.hm-day-labels{{display:flex;flex-direction:column;gap:3px;padding-top:22px;padding-right:8px;flex-shrink:0}}
+.hm-day-labels .hm-dl{{height:14px;font-size:11px;color:var(--text-dim);display:flex;align-items:center;line-height:1}}
+.hm-scroll{{overflow-x:auto;padding-bottom:4px;flex:1}}
+.hm-month-row{{display:flex;gap:3px;height:18px;margin-bottom:4px}}
+.hm-month-slot{{width:14px;flex-shrink:0;font-size:11px;color:var(--text-dim);white-space:nowrap}}
+.hm-cells{{display:flex;gap:3px}}
+.hm-week{{display:flex;flex-direction:column;gap:3px}}
+.hm-cell{{width:14px;height:14px;border-radius:2px;background:var(--hm-0);cursor:pointer;transition:outline-color .1s}}
+.hm-cell.future{{background:transparent;cursor:default}}
+.hm-cell.pre-join{{background:var(--hm-pre);cursor:default}}
+.hm-cell.l1{{background:var(--hm-1)}}.hm-cell.l2{{background:var(--hm-2)}}
+.hm-cell.l3{{background:var(--hm-3)}}.hm-cell.l4{{background:var(--hm-4)}}
+.hm-cell:not(.future):not(.pre-join):hover{{outline:1.5px solid var(--amber);outline-offset:1px}}
+.hm-cell.selected{{outline:2px solid var(--amber);outline-offset:1px}}
+.hm-footer{{display:flex;justify-content:space-between;margin-top:8px;font-size:10px;color:var(--text-dim)}}
 .hm-legend{{display:flex;gap:3px;align-items:center;font-size:10px;color:var(--text-dim)}}
 .hm-legend .sw{{width:12px;height:12px;border-radius:2px}}
 
@@ -322,8 +332,22 @@ td a:hover{{color:var(--amber)}}
 
 <div class="section">
   <div class="section-title">Contributions</div>
-  <div class="heatmap-wrap"><div class="heatmap" id="heatmap"></div></div>
-  <div class="hm-labels">
+  <div class="hm-graph">
+    <div class="hm-day-labels">
+      <div class="hm-dl"></div>
+      <div class="hm-dl">Mon</div>
+      <div class="hm-dl"></div>
+      <div class="hm-dl">Wed</div>
+      <div class="hm-dl"></div>
+      <div class="hm-dl">Fri</div>
+      <div class="hm-dl"></div>
+    </div>
+    <div class="hm-scroll">
+      <div class="hm-month-row" id="heatmapMonths"></div>
+      <div class="hm-cells" id="heatmap"></div>
+    </div>
+  </div>
+  <div class="hm-footer">
     <span>Joined {earliest_join}</span>
     <div class="hm-legend">
       <span>Less</span>
@@ -482,19 +506,34 @@ function updateMonthOptions() {{
 }}
 
 function renderHeatmap() {{
-  const el = document.getElementById('heatmap');
-  el.innerHTML = '';
+  const cellsEl = document.getElementById('heatmap');
+  const monthsEl = document.getElementById('heatmapMonths');
+  cellsEl.innerHTML = '';
+  monthsEl.innerHTML = '';
   const prs = filtered();
   const byDay = {{}};
   prs.forEach(p => {{ byDay[p.created] = (byDay[p.created] || 0) + 1; }});
 
-  HEATMAP.forEach(week => {{
+  const mNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  let prevMonth = null;
+
+  HEATMAP.forEach((week, wi) => {{
+    const firstDate = week[0].date;
+    const mi = parseInt(firstDate.slice(5,7)) - 1;
+    const ms = document.createElement('div');
+    ms.className = 'hm-month-slot';
+    if (mi !== prevMonth) {{
+      ms.textContent = mNames[mi];
+      prevMonth = mi;
+    }}
+    monthsEl.appendChild(ms);
+
     const col = document.createElement('div');
-    col.className = 'heatmap-week';
+    col.className = 'hm-week';
     week.forEach(day => {{
       const d = document.createElement('div');
       const count = byDay[day.date] || 0;
-      let cls = 'heatmap-day';
+      let cls = 'hm-cell';
       if (day.future) cls += ' future';
       else if (day.preJoin) cls += ' pre-join';
       else if (count === 0) {{}}
@@ -512,7 +551,7 @@ function renderHeatmap() {{
       }}
       col.appendChild(d);
     }});
-    el.appendChild(col);
+    cellsEl.appendChild(col);
   }});
 }}
 
