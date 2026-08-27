@@ -2,7 +2,7 @@ name: Track PRs
 
 on:
   schedule:
-    - cron: '0 18 * * 0'
+    - cron: '30 20 * * *'
   workflow_dispatch:
     inputs:
       full_backfill:
@@ -35,8 +35,8 @@ jobs:
 
       - name: Commit
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "millamatew"
+          git config user.email "millamatew@gmail.com"
           git add data/ docs/
           if git diff --staged --quiet; then
             echo "No changes."
