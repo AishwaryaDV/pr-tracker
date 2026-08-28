@@ -1,5 +1,257 @@
 [
   {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-08-27T20:36:37Z",
+    "labels": [],
+    "number": 96,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "open",
+    "title": "fix: dialog light mode surface matches global dialog shells",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/96",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-27T17:57:21Z",
+    "createdAt": "2026-08-27T17:22:31Z",
+    "labels": [],
+    "number": 36,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "fix(firmware): omit ib_expected_version when empty instead of sending null",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/36",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-27T20:07:32Z",
+    "createdAt": "2026-08-27T12:51:48Z",
+    "labels": [],
+    "number": 94,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(firmware): R2 firmware binary upload/delete",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/94",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-27T11:15:16Z",
+    "createdAt": "2026-08-27T10:53:43Z",
+    "labels": [],
+    "number": 93,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(sensors): use MQTT sensor firmware/hardware version fields",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/93",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-27T12:59:53Z",
+    "createdAt": "2026-08-27T07:38:42Z",
+    "labels": [],
+    "number": 92,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix: mobile and tablet responsiveness enhancements",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/92",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-27T07:35:41Z",
+    "createdAt": "2026-08-27T06:51:47Z",
+    "labels": [],
+    "number": 90,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix: bed temperature units, device table navigation, home page scroll",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/90",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-27T06:51:17Z",
+    "createdAt": "2026-08-27T06:26:09Z",
+    "labels": [],
+    "number": 89,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "fix(devices): unify bed diagram temperature units",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/89",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-27T07:35:51Z",
+    "createdAt": "2026-08-26T13:05:12Z",
+    "labels": [],
+    "number": 88,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "fix(infrastructure): replace Elasticsearch with ClickHouse status in topology",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/88",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-26T13:27:46Z",
+    "createdAt": "2026-08-26T05:36:06Z",
+    "labels": [],
+    "number": 87,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix: search, schedule, and UI enhancements",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/87",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-25T20:55:47Z",
+    "createdAt": "2026-08-25T20:16:07Z",
+    "labels": [],
+    "number": 85,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(device): device detail UI enhancements",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/85",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-25T20:11:05Z",
+    "createdAt": "2026-08-25T19:54:53Z",
+    "labels": [],
+    "number": 84,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "feat(device): show factory serial below MAC in device header",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/84",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-08-25T19:00:28Z",
+    "labels": [],
+    "number": 730,
+    "repository": {
+      "name": "orion-control-plane",
+      "nameWithOwner": "Orion-Sleep/orion-control-plane"
+    },
+    "state": "open",
+    "title": "chore: remove 20 unused admin GET endpoints",
+    "url": "https://github.com/Orion-Sleep/orion-control-plane/pull/730",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-25T16:18:32Z",
+    "createdAt": "2026-08-25T15:43:16Z",
+    "labels": [],
+    "number": 34,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "fix(chats): COALESCE last_message_direction for NULL before backfill",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/34",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-25T16:54:33Z",
+    "createdAt": "2026-08-25T15:18:15Z",
+    "labels": [],
+    "number": 82,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(device): add text input and unit tabs to edit temperature dialog",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/82",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-25T21:19:59Z",
+    "createdAt": "2026-08-25T15:15:09Z",
+    "labels": [],
+    "number": 389,
+    "repository": {
+      "name": "orion-sales-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-sales-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(chats): repurpose action-required tab to inbound + not opted out",
+    "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/389",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-25T13:48:40Z",
+    "createdAt": "2026-08-25T13:09:27Z",
+    "labels": [],
+    "number": 33,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(chats): repurpose action-required queue to inbound + not opted out",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/33",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-25T07:30:22Z",
+    "createdAt": "2026-08-24T15:25:14Z",
+    "labels": [],
+    "number": 385,
+    "repository": {
+      "name": "orion-sales-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-sales-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(deals): batch deal-sheet prefetch (~60 calls \u2192 3)",
+    "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/385",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-24T15:45:03Z",
+    "createdAt": "2026-08-24T14:08:38Z",
+    "labels": [],
+    "number": 31,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(batch): batch read endpoints for deals, chats, and contact-orders",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/31",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "2026-08-21T13:50:57Z",
     "createdAt": "2026-08-21T12:53:59Z",
     "labels": [],
@@ -14,7 +266,7 @@
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-08-25T16:53:57Z",
     "createdAt": "2026-08-21T09:31:25Z",
     "labels": [],
     "number": 80,
@@ -22,7 +274,7 @@
       "name": "orion-data-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat(schedule): temperature telemetry overlay on device schedule chart",
     "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/80",
     "org": "Orion-Sleep"
@@ -98,7 +350,7 @@
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-08-24T19:03:25Z",
     "createdAt": "2026-08-20T08:40:27Z",
     "labels": [],
     "number": 79,
@@ -106,7 +358,7 @@
       "name": "orion-data-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "perf: Lighthouse performance pass \u2014 devices, customer detail, app-wide",
     "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/79",
     "org": "Orion-Sleep"
