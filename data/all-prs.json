@@ -1,6 +1,20 @@
 [
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-08-28T21:10:57Z",
+    "createdAt": "2026-08-28T10:11:28Z",
+    "labels": [],
+    "number": 98,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(infrastructure): adjust topology auto-fit to show both pipeline rows",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/98",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-28T07:53:30Z",
     "createdAt": "2026-08-27T20:36:37Z",
     "labels": [],
     "number": 96,
@@ -8,8 +22,8 @@
       "name": "orion-data-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
     },
-    "state": "open",
-    "title": "fix: dialog light mode surface matches global dialog shells",
+    "state": "merged",
+    "title": "fix: UI polish \u2014 dialog surface, Shopify URL, settings centering, selection bar overlap",
     "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/96",
     "org": "Orion-Sleep"
   },
