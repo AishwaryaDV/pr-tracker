@@ -1,5 +1,19 @@
 [
   {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-08-30T11:33:36Z",
+    "labels": [],
+    "number": 99,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "open",
+    "title": "fix(devices): fix error toast and stale UI after live device deletion",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/99",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "2026-08-28T21:10:57Z",
     "createdAt": "2026-08-28T10:11:28Z",
     "labels": [],
