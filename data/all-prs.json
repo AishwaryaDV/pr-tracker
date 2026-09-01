@@ -1,6 +1,62 @@
 [
   {
     "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-08-31T19:24:04Z",
+    "labels": [],
+    "number": 5,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "open",
+    "title": "feat: add shared uplot-chart module",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/5",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-31T17:56:01Z",
+    "createdAt": "2026-08-31T15:36:57Z",
+    "labels": [],
+    "number": 42,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(history): table column clubbing, default visibility, panel persistence, keybinding fixes",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/42",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-31T18:39:30Z",
+    "createdAt": "2026-08-31T13:34:36Z",
+    "labels": [],
+    "number": 101,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(devices): auto-reconcile failed firmware updates when device is on target version",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/101",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-31T18:40:01Z",
+    "createdAt": "2026-08-31T04:28:25Z",
+    "labels": [],
+    "number": 100,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat: add dynamic OG image generation for link unfurls",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/100",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-08-31T12:48:38Z",
     "createdAt": "2026-08-30T11:33:36Z",
     "labels": [],
     "number": 99,
@@ -8,7 +64,7 @@
       "name": "orion-data-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "fix(devices): fix error toast and stale UI after live device deletion",
     "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/99",
     "org": "Orion-Sleep"
