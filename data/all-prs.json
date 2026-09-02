@@ -1,5 +1,75 @@
 [
   {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-02T16:55:32Z",
+    "labels": [],
+    "number": 40,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "open",
+    "title": "feat: add test-studio GET handler factories",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/40",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-02T14:19:17Z",
+    "createdAt": "2026-09-02T13:27:51Z",
+    "labels": [],
+    "number": 7,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "merged",
+    "title": "feat: add Grafana-style telemetry range control",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/7",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-02T18:28:12Z",
+    "createdAt": "2026-09-02T05:54:38Z",
+    "labels": [],
+    "number": 108,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(devices): telemetry charts tab on device detail",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/108",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-02T08:25:31Z",
+    "createdAt": "2026-09-02T05:33:01Z",
+    "labels": [],
+    "number": 38,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat: device telemetry history query + handlers",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/38",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-02T08:27:20Z",
+    "createdAt": "2026-09-02T05:09:00Z",
+    "labels": [],
+    "number": 6,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "merged",
+    "title": "feat(uplot-chart): add TelemetryChartStack orchestration layer",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/6",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "2026-09-01T15:00:24Z",
     "createdAt": "2026-09-01T14:43:51Z",
     "labels": [],
@@ -42,7 +112,7 @@
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-02T18:44:19Z",
     "createdAt": "2026-09-01T11:54:33Z",
     "labels": [],
     "number": 46,
@@ -50,7 +120,7 @@
       "name": "orion-test-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "refactor: use shared uplot-chart from admin-studio-components",
     "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/46",
     "org": "Orion-Sleep"
