@@ -1,6 +1,48 @@
 [
   {
     "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-03T16:19:12Z",
+    "labels": [],
+    "number": 41,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "open",
+    "title": "feat: test-studio write handler migration (plans, runs, factories, device-register, command)",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/41",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-03T12:20:07Z",
+    "labels": [],
+    "number": 54,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "open",
+    "title": "fix(history): Shape B server-side filtering fixes",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/54",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-03T07:49:45Z",
+    "labels": [],
+    "number": 52,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "open",
+    "title": "feat(bff): migrate 7 GET handlers to networking package",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/52",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-03T05:47:20Z",
     "createdAt": "2026-09-02T16:55:32Z",
     "labels": [],
     "number": 40,
@@ -8,7 +50,7 @@
       "name": "orion-admin-studio-networking",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat: add test-studio GET handler factories",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/40",
     "org": "Orion-Sleep"
