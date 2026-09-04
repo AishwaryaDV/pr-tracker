@@ -1,6 +1,20 @@
 [
   {
     "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-04T10:02:06Z",
+    "labels": [],
+    "number": 42,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "open",
+    "title": "feat: telemetry history handler factory (TS BFF migration phase 3)",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/42",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
     "createdAt": "2026-09-03T16:19:12Z",
     "labels": [],
     "number": 41,
