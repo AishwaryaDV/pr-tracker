@@ -1,6 +1,48 @@
 [
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-05T14:21:03Z",
+    "createdAt": "2026-09-05T11:54:31Z",
+    "labels": [],
+    "number": 45,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "chore: bump version to 0.7.3",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/45",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-05T11:52:32Z",
+    "createdAt": "2026-09-05T11:27:32Z",
+    "labels": [],
+    "number": 110,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix: prevent Safari input zoom on focus",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/110",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-05T09:17:33Z",
+    "createdAt": "2026-09-05T04:02:01Z",
+    "labels": [],
+    "number": 43,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "fix: port missing runs filter params and facets handler (follow-up to #40)",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/43",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-05T09:17:08Z",
     "createdAt": "2026-09-04T10:02:06Z",
     "labels": [],
     "number": 42,
@@ -8,13 +50,13 @@
       "name": "orion-admin-studio-networking",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat: telemetry history handler factory (TS BFF migration phase 3)",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/42",
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-05T14:21:49Z",
     "createdAt": "2026-09-03T16:19:12Z",
     "labels": [],
     "number": 41,
@@ -22,13 +64,13 @@
       "name": "orion-admin-studio-networking",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat: test-studio write handler migration (plans, runs, factories, device-register, command)",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/41",
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-05T03:33:07Z",
     "createdAt": "2026-09-03T12:20:07Z",
     "labels": [],
     "number": 54,
@@ -36,13 +78,13 @@
       "name": "orion-test-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "fix(history): Shape B server-side filtering fixes",
     "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/54",
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-05T16:15:12Z",
     "createdAt": "2026-09-03T07:49:45Z",
     "labels": [],
     "number": 52,
@@ -50,7 +92,7 @@
       "name": "orion-test-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat(bff): migrate 7 GET handlers to networking package",
     "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/52",
     "org": "Orion-Sleep"
