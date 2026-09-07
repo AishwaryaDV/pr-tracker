@@ -1,6 +1,6 @@
 [
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-07T14:21:31Z",
     "createdAt": "2026-09-06T15:21:26Z",
     "labels": [],
     "number": 57,
@@ -8,7 +8,7 @@
       "name": "orion-test-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat(bff): replace inline write handlers with networking package mounts",
     "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/57",
     "org": "Orion-Sleep"
