@@ -1,5 +1,33 @@
 [
   {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-08T05:11:24Z",
+    "labels": [],
+    "number": 113,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "open",
+    "title": "perf: stream HTML shell via deferred /me \u2014 match CC Suspense pattern",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/113",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-08T05:11:01Z",
+    "createdAt": "2026-09-08T02:48:35Z",
+    "labels": [],
+    "number": 112,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "perf: resolve /me server-side to eliminate client waterfall",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/112",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "2026-09-07T14:21:31Z",
     "createdAt": "2026-09-06T15:21:26Z",
     "labels": [],
