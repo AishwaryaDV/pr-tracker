@@ -1,6 +1,62 @@
 [
   {
     "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-09T10:41:40Z",
+    "labels": [],
+    "number": 116,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "open",
+    "title": "fix(auth): clear the whole query cache on sign-out; restore telemetry range props",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/116",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-09T07:28:00Z",
+    "labels": [],
+    "number": 47,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "open",
+    "title": "fix(devices): declare owner contact fields on the fleet wire type",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/47",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-09T10:20:57Z",
+    "createdAt": "2026-09-09T07:04:19Z",
+    "labels": [],
+    "number": 115,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(auth): clear cached /me query on sign-out + typecheck cleanup",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/115",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-09T10:22:46Z",
+    "createdAt": "2026-09-09T06:39:53Z",
+    "labels": [],
+    "number": 114,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "perf(devices): stop background fleet polling outside /devices",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/114",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-09T10:22:28Z",
     "createdAt": "2026-09-08T05:11:24Z",
     "labels": [],
     "number": 113,
@@ -8,7 +64,7 @@
       "name": "orion-data-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "perf: stream HTML shell via deferred /me \u2014 match CC Suspense pattern",
     "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/113",
     "org": "Orion-Sleep"
