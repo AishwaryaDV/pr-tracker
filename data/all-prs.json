@@ -1,6 +1,104 @@
 [
   {
     "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-10T16:52:48Z",
+    "labels": [],
+    "number": 8,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "open",
+    "title": "feat(phone-input): persist the picked country, restore it flash-free (0.5.0)",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/8",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-10T16:52:10Z",
+    "labels": [],
+    "number": 423,
+    "repository": {
+      "name": "orion-command-center-web",
+      "nameWithOwner": "Orion-Sleep/orion-command-center-web"
+    },
+    "state": "open",
+    "title": "fix(phone): drop country auto-detection, default to the persisted pick or +1",
+    "url": "https://github.com/Orion-Sleep/orion-command-center-web/pull/423",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-10T16:51:14Z",
+    "labels": [],
+    "number": 27,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "open",
+    "title": "fix(phone): don't persist onchange countries until the saved pick is restored",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/27",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-10T16:03:58Z",
+    "createdAt": "2026-09-10T12:42:23Z",
+    "labels": [],
+    "number": 421,
+    "repository": {
+      "name": "orion-command-center-web",
+      "nameWithOwner": "Orion-Sleep/orion-command-center-web"
+    },
+    "state": "merged",
+    "title": "fix(phone): persist an explicit country pick over the detected default",
+    "url": "https://github.com/Orion-Sleep/orion-command-center-web/pull/421",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-10T16:00:06Z",
+    "createdAt": "2026-09-10T11:28:26Z",
+    "labels": [],
+    "number": 25,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(phone): persist the phone country pick, default to +1",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/25",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-10T16:03:44Z",
+    "createdAt": "2026-09-10T10:02:02Z",
+    "labels": [],
+    "number": 118,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(login): persist the phone country pick, default to +1",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/118",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-10T16:10:12Z",
+    "createdAt": "2026-09-10T05:36:23Z",
+    "labels": [],
+    "number": 117,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "chore(deps): bump @orionsleep/admin-studio-networking to ^0.8.0",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/117",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-10T03:53:27Z",
     "createdAt": "2026-09-09T10:41:40Z",
     "labels": [],
     "number": 116,
@@ -8,13 +106,13 @@
       "name": "orion-data-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "fix(auth): clear the whole query cache on sign-out; restore telemetry range props",
     "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/116",
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-10T03:42:41Z",
     "createdAt": "2026-09-09T07:28:00Z",
     "labels": [],
     "number": 47,
@@ -22,7 +120,7 @@
       "name": "orion-admin-studio-networking",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
     },
-    "state": "open",
+    "state": "merged",
     "title": "fix(devices): declare owner contact fields on the fleet wire type",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/47",
     "org": "Orion-Sleep"
