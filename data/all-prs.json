@@ -1,6 +1,20 @@
 [
   {
     "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-12T13:30:21Z",
+    "labels": [],
+    "number": 62,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "open",
+    "title": "perf: drop the per-navigation server permission gates on Device Register, Factories and Analytics",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/62",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-12T05:01:18Z",
     "createdAt": "2026-09-11T11:09:08Z",
     "labels": [],
     "number": 60,
@@ -8,13 +22,13 @@
       "name": "orion-test-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat(app): add dark home-screen icons and web manifest",
     "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/60",
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-12T05:01:07Z",
     "createdAt": "2026-09-11T05:46:46Z",
     "labels": [],
     "number": 409,
@@ -22,13 +36,13 @@
       "name": "orion-sales-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-sales-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat(app): add dark home-screen icons and web manifest",
     "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/409",
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-12T05:01:13Z",
     "createdAt": "2026-09-11T05:46:00Z",
     "labels": [],
     "number": 28,
@@ -36,13 +50,13 @@
       "name": "orion-admin-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat(app): add dark home-screen icons and web manifest",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/28",
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-12T05:01:03Z",
     "createdAt": "2026-09-11T05:44:04Z",
     "labels": [],
     "number": 120,
@@ -50,7 +64,7 @@
       "name": "orion-data-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "fix(devices): zero-shift reconnecting state + home-screen icons",
     "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/120",
     "org": "Orion-Sleep"
@@ -70,7 +84,7 @@
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-12T05:01:24Z",
     "createdAt": "2026-09-10T16:52:10Z",
     "labels": [],
     "number": 423,
@@ -78,7 +92,7 @@
       "name": "orion-command-center-web",
       "nameWithOwner": "Orion-Sleep/orion-command-center-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "fix(phone): drop country auto-detection, default to the persisted pick or +1",
     "url": "https://github.com/Orion-Sleep/orion-command-center-web/pull/423",
     "org": "Orion-Sleep"
