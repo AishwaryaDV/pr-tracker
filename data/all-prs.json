@@ -70,7 +70,7 @@
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-13T06:04:41Z",
     "createdAt": "2026-09-10T16:52:48Z",
     "labels": [],
     "number": 8,
@@ -78,7 +78,7 @@
       "name": "orion-admin-studio-components",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat(phone-input): persist the picked country, restore it flash-free (0.5.0)",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/8",
     "org": "Orion-Sleep"
