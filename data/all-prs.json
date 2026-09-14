@@ -1,6 +1,34 @@
 [
   {
     "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-14T05:10:39Z",
+    "labels": [],
+    "number": 9,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "open",
+    "title": "chore: bump to 0.5.1 \u2014 republish the phone-input persistence with a build guard",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/9",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-14T05:02:18Z",
+    "labels": [],
+    "number": 63,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "open",
+    "title": "chore(deps): bump @orionsleep/admin-studio-components to ^0.5.0",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/63",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
     "createdAt": "2026-09-12T13:30:21Z",
     "labels": [],
     "number": 62,
@@ -9,7 +37,7 @@
       "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
     },
     "state": "open",
-    "title": "perf: drop the per-navigation server permission gates on Device Register, Factories and Analytics",
+    "title": "perf: instant loads for the gated pages + clear cached data on sign-out",
     "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/62",
     "org": "Orion-Sleep"
   },
