@@ -1,6 +1,76 @@
 [
   {
     "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-17T18:41:09Z",
+    "labels": [],
+    "number": 71,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "open",
+    "title": "fix(test-history): export skips the live overlay so running runs never leak into the CSV",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/71",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-17T17:18:40Z",
+    "createdAt": "2026-09-17T15:17:54Z",
+    "labels": [],
+    "number": 123,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "chore(deps): bump @orionsleep/admin-studio-components to ^0.5.1 \u2014 package-owned phone-country persistence",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/123",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-17T18:28:56Z",
+    "createdAt": "2026-09-17T14:12:28Z",
+    "labels": [],
+    "number": 122,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(infrastructure): staging-device lifecycle \u2014 presence badge, firmware-based moves, honest statuses",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/122",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-17T17:22:10Z",
+    "createdAt": "2026-09-17T14:10:39Z",
+    "labels": [],
+    "number": 423,
+    "repository": {
+      "name": "orion-sales-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-sales-studio-web"
+    },
+    "state": "merged",
+    "title": "chore(deps): bump @orionsleep/admin-studio-components to ^0.5.1 \u2014 package-owned phone-country persistence",
+    "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/423",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-17T17:18:05Z",
+    "createdAt": "2026-09-17T14:01:37Z",
+    "labels": [],
+    "number": 31,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "merged",
+    "title": "chore(deps): bump @orionsleep/admin-studio-components to ^0.5.1 \u2014 package-owned phone-country persistence",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/31",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-17T10:13:31Z",
     "createdAt": "2026-09-15T07:49:07Z",
     "labels": [],
     "number": 64,
@@ -8,13 +78,13 @@
       "name": "orion-test-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "fix(test-history): export always ships the filtered History dataset \u2014 never in-progress runs",
     "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/64",
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-17T10:16:31Z",
     "createdAt": "2026-09-14T05:10:39Z",
     "labels": [],
     "number": 9,
@@ -22,13 +92,13 @@
       "name": "orion-admin-studio-components",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
     },
-    "state": "open",
+    "state": "merged",
     "title": "chore: bump to 0.5.1 \u2014 republish the phone-input persistence with a build guard",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/9",
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-17T17:22:18Z",
     "createdAt": "2026-09-14T05:02:18Z",
     "labels": [],
     "number": 63,
@@ -36,8 +106,8 @@
       "name": "orion-test-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
     },
-    "state": "open",
-    "title": "chore(deps): bump @orionsleep/admin-studio-components to ^0.5.0",
+    "state": "merged",
+    "title": "chore(deps): bump @orionsleep/admin-studio-components to ^0.5.1",
     "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/63",
     "org": "Orion-Sleep"
   },
