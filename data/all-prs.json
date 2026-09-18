@@ -1,5 +1,75 @@
 [
   {
+    "closedAt": "2026-09-18T16:58:28Z",
+    "createdAt": "2026-09-18T13:39:39Z",
+    "labels": [],
+    "number": 129,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix: fail-closed permission gating across pages, nav, and device actions",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/129",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-18T16:51:01Z",
+    "createdAt": "2026-09-18T13:34:16Z",
+    "labels": [],
+    "number": 60,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "fix: enforce the Wi-Fi/IP allowlist beyond the fleet list; guard live writes; customers gate",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/60",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-18T20:18:23Z",
+    "createdAt": "2026-09-18T08:54:55Z",
+    "labels": [],
+    "number": 77,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "merged",
+    "title": "Stop pulsing the water diagram's low-vessel fill",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/77",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-18T12:03:00Z",
+    "createdAt": "2026-09-18T08:54:27Z",
+    "labels": [],
+    "number": 127,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "Stop pulsing the water diagram's low-tank fill",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/127",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-18T05:12:46Z",
+    "createdAt": "2026-09-18T01:58:48Z",
+    "labels": [],
+    "number": 427,
+    "repository": {
+      "name": "orion-command-center-web",
+      "nameWithOwner": "Orion-Sleep/orion-command-center-web"
+    },
+    "state": "closed",
+    "title": "feat(devices): Telemetry tab with China Standard Time support",
+    "url": "https://github.com/Orion-Sleep/orion-command-center-web/pull/427",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "0001-01-01T00:00:00Z",
     "createdAt": "2026-09-17T18:41:09Z",
     "labels": [],
