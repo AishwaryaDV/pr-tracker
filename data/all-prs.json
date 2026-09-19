@@ -1,5 +1,19 @@
 [
   {
+    "closedAt": "2026-09-19T06:13:30Z",
+    "createdAt": "2026-09-19T04:04:53Z",
+    "labels": [],
+    "number": 135,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(devices): keep grant subscription available on the device subscription card",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/135",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "2026-09-18T16:58:28Z",
     "createdAt": "2026-09-18T13:39:39Z",
     "labels": [],
