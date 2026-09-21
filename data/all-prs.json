@@ -1,5 +1,61 @@
 [
   {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-21T23:14:15Z",
+    "labels": [],
+    "number": 65,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "open",
+    "title": "feat(device-support): batch variants for every per-column device read (0.17.0)",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/65",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-21T22:51:57Z",
+    "labels": [],
+    "number": 151,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "open",
+    "title": "chore(deps): bump admin-studio-components to 0.6.0",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/151",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-21T14:23:12Z",
+    "createdAt": "2026-09-21T13:09:15Z",
+    "labels": [],
+    "number": 143,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(devices): server-side table and detail layout preferences",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/143",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-21T13:17:24Z",
+    "createdAt": "2026-09-21T12:35:09Z",
+    "labels": [],
+    "number": 63,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(studio-preferences): save proxy for the admin studio layout views (0.14.0)",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/63",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "2026-09-19T06:13:30Z",
     "createdAt": "2026-09-19T04:04:53Z",
     "labels": [],
