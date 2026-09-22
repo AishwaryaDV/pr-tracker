@@ -1,6 +1,146 @@
 [
   {
+    "closedAt": "2026-09-22T20:43:59Z",
+    "createdAt": "2026-09-22T18:37:07Z",
+    "labels": [],
+    "number": 163,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "perf(devices): ride thermal labels on the batched telemetry read",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/163",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-22T20:34:44Z",
+    "createdAt": "2026-09-22T18:28:46Z",
+    "labels": [],
+    "number": 67,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(device-support): fold thermal labels into the telemetry handlers",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/67",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-22T16:40:01Z",
+    "createdAt": "2026-09-22T13:32:50Z",
+    "labels": [],
+    "number": 876,
+    "repository": {
+      "name": "orion-control-plane",
+      "nameWithOwner": "Orion-Sleep/orion-control-plane"
+    },
+    "state": "closed",
+    "title": "feat(firmware): device firmware-target resolution endpoint",
+    "url": "https://github.com/Orion-Sleep/orion-control-plane/pull/876",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-22T21:44:54Z",
+    "createdAt": "2026-09-22T13:14:48Z",
+    "labels": [],
+    "number": 159,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(devices): firmware dialog search + firmware card foot action",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/159",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-22T13:14:06Z",
+    "labels": [],
+    "number": 38,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "open",
+    "title": "feat(users): permissions-first phone view for the permission sheet",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/38",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-22T10:34:13Z",
+    "createdAt": "2026-09-22T08:28:57Z",
+    "labels": [],
+    "number": 873,
+    "repository": {
+      "name": "orion-control-plane",
+      "nameWithOwner": "Orion-Sleep/orion-control-plane"
+    },
+    "state": "merged",
+    "title": "feat(platform): device_selections column on AdminStudioPreferences",
+    "url": "https://github.com/Orion-Sleep/orion-control-plane/pull/873",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-22T11:14:29Z",
+    "createdAt": "2026-09-22T07:48:59Z",
+    "labels": [],
+    "number": 155,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(devices): firmware updates split into target and custom-version flows",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/155",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-22T11:03:50Z",
+    "createdAt": "2026-09-22T07:03:31Z",
+    "labels": [],
+    "number": 36,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(permissions): execute_custom_firmware_updates grant entry",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/36",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-22T11:01:58Z",
+    "createdAt": "2026-09-22T06:06:04Z",
+    "labels": [],
+    "number": 871,
+    "repository": {
+      "name": "orion-control-plane",
+      "nameWithOwner": "Orion-Sleep/orion-control-plane"
+    },
+    "state": "merged",
+    "title": "feat(firmware): split explicit-version updates from update-to-target behind execute_custom_firmware_updates",
+    "url": "https://github.com/Orion-Sleep/orion-control-plane/pull/871",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-22T07:55:35Z",
+    "createdAt": "2026-09-21T23:31:54Z",
+    "labels": [],
+    "number": 152,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(devices): batch the remaining per-column device detail reads",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/152",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-22T06:20:14Z",
     "createdAt": "2026-09-21T23:14:15Z",
     "labels": [],
     "number": 65,
@@ -8,7 +148,7 @@
       "name": "orion-admin-studio-networking",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat(device-support): batch variants for every per-column device read (0.17.0)",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/65",
     "org": "Orion-Sleep"
