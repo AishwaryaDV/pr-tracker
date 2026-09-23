@@ -1,5 +1,145 @@
 [
   {
+    "closedAt": "2026-09-23T20:46:14Z",
+    "createdAt": "2026-09-23T20:17:09Z",
+    "labels": [],
+    "number": 172,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(devices): offer legacy selection recovery even after new selections exist",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/172",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-23T18:55:50Z",
+    "createdAt": "2026-09-23T18:16:27Z",
+    "labels": [],
+    "number": 170,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(devices): recover pre-scoping saved selections into the shared field",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/170",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-23T15:39:54Z",
+    "labels": [],
+    "number": 12,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "open",
+    "title": "feat(telemetry-range): optional calendarProvidesTime for calendar time selection",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/12",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-23T17:23:19Z",
+    "createdAt": "2026-09-23T14:18:20Z",
+    "labels": [],
+    "number": 85,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(test-history): share saved selections through the server",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/85",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-23T17:08:21Z",
+    "createdAt": "2026-09-23T13:54:01Z",
+    "labels": [],
+    "number": 169,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(devices): share saved selections through the server",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/169",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-23T14:02:16Z",
+    "createdAt": "2026-09-23T13:29:05Z",
+    "labels": [],
+    "number": 68,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(studio-prefs): shared device_selections + test_history_table_view on /me",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/68",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-23T13:46:46Z",
+    "createdAt": "2026-09-23T13:22:04Z",
+    "labels": [],
+    "number": 84,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(test-history): make column drag-reorder direction-aware",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/84",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-23T13:29:25Z",
+    "createdAt": "2026-09-23T12:59:14Z",
+    "labels": [],
+    "number": 887,
+    "repository": {
+      "name": "orion-control-plane",
+      "nameWithOwner": "Orion-Sleep/orion-control-plane"
+    },
+    "state": "merged",
+    "title": "feat(studio-prefs): add test_history_table_view column",
+    "url": "https://github.com/Orion-Sleep/orion-control-plane/pull/887",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-23T13:16:27Z",
+    "createdAt": "2026-09-23T12:46:41Z",
+    "labels": [],
+    "number": 167,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "style: match all list tables to the compact devices table row height",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/167",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-23T05:17:46Z",
+    "createdAt": "2026-09-23T00:13:55Z",
+    "labels": [],
+    "number": 165,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(devices): keep full-width home cards full width in the compare view",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/165",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "2026-09-22T20:43:59Z",
     "createdAt": "2026-09-22T18:37:07Z",
     "labels": [],
