@@ -1,5 +1,89 @@
 [
   {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-24T13:38:35Z",
+    "labels": [],
+    "number": 16,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "open",
+    "title": "feat(uplot-chart): tighten card header to plot spacing",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/16",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-24T19:51:07Z",
+    "createdAt": "2026-09-24T12:03:20Z",
+    "labels": [],
+    "number": 179,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(devices): compact telemetry charts + split overlapped binaries",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/179",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-24T12:10:39Z",
+    "createdAt": "2026-09-24T11:35:04Z",
+    "labels": [],
+    "number": 15,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "merged",
+    "title": "feat(uplot-chart): split binary lanes + compact binary/header rendering",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/15",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-24T19:58:54Z",
+    "createdAt": "2026-09-24T10:53:56Z",
+    "labels": [],
+    "number": 178,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(devices): collapsible Sensors section on the telemetry tab",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/178",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-24T10:57:14Z",
+    "createdAt": "2026-09-24T10:41:54Z",
+    "labels": [],
+    "number": 71,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(telemetry): sleep-sensor biometric channels",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/71",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-24T06:38:50Z",
+    "createdAt": "2026-09-24T02:30:59Z",
+    "labels": [],
+    "number": 174,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(devices): fill open-device set to the cap instead of refusing it",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/174",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "2026-09-23T20:46:14Z",
     "createdAt": "2026-09-23T20:17:09Z",
     "labels": [],
