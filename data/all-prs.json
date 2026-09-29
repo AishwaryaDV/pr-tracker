@@ -1,5 +1,19 @@
 [
   {
+    "closedAt": "2026-09-28T11:20:40Z",
+    "createdAt": "2026-09-28T08:46:21Z",
+    "labels": [],
+    "number": 184,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "perf(telemetry): one IN query across open devices for compare charts",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/184",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "0001-01-01T00:00:00Z",
     "createdAt": "2026-09-24T13:38:35Z",
     "labels": [],
