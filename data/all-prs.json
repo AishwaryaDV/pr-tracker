@@ -1,5 +1,131 @@
 [
   {
+    "closedAt": "2026-09-29T19:41:26Z",
+    "createdAt": "2026-09-29T18:36:03Z",
+    "labels": [],
+    "number": 197,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(devices): price the selection count by its digits so the row fits at any magnitude",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/197",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-29T15:56:01Z",
+    "createdAt": "2026-09-29T15:39:49Z",
+    "labels": [],
+    "number": 196,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "test(e2e): add a Playwright harness that can see what a chart painted",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/196",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-29T17:55:24Z",
+    "createdAt": "2026-09-29T15:31:12Z",
+    "labels": [],
+    "number": 195,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(devices): keep the merged tile's position when a fold absorbs it",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/195",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-29T17:13:50Z",
+    "createdAt": "2026-09-29T15:01:21Z",
+    "labels": [],
+    "number": 194,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "merge: restore main ancestry after the #187 squash \u2014 MERGE COMMIT ONLY, do not squash",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/194",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-29T13:21:37Z",
+    "labels": [],
+    "number": 193,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "open",
+    "title": "Merge `develop` to `main`",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/193",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-29T10:36:54Z",
+    "createdAt": "2026-09-29T09:17:38Z",
+    "labels": [],
+    "number": 93,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(test-history): merge the pump, valve and firmware cards on components 0.13.0",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/93",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-29T10:36:33Z",
+    "createdAt": "2026-09-29T08:21:10Z",
+    "labels": [],
+    "number": 191,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(devices): keep the selection bar off a scrollbar and its panels on the dark ramp",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/191",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-29T13:07:29Z",
+    "createdAt": "2026-09-29T03:09:26Z",
+    "labels": [],
+    "number": 189,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(devices): carry retired pump, valve and firmware cards onto their merged replacements",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/189",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-29T07:14:18Z",
+    "createdAt": "2026-09-29T02:24:58Z",
+    "labels": [],
+    "number": 24,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "merged",
+    "title": "feat(telemetry-catalog): compact the binary cards, fold the pump, valve and firmware pairs",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/24",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "2026-09-28T11:20:40Z",
     "createdAt": "2026-09-28T08:46:21Z",
     "labels": [],
