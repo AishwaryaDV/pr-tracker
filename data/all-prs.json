@@ -1,5 +1,159 @@
 [
   {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-30T20:28:39Z",
+    "labels": [],
+    "number": 202,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "open",
+    "title": "fix(schedule): slice the whole night so afternoon telemetry is not discarded",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/202",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-30T20:06:13Z",
+    "labels": [],
+    "number": 201,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "open",
+    "title": "Merge `develop` to `main`",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/201",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-30T20:05:08Z",
+    "createdAt": "2026-09-30T18:36:04Z",
+    "labels": [],
+    "number": 200,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(schedule): widen the night chart to the telemetry it measured",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/200",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-30T15:40:10Z",
+    "labels": [],
+    "number": 461,
+    "repository": {
+      "name": "orion-sales-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-sales-studio-web"
+    },
+    "state": "open",
+    "title": "feat(ui): move the studio switcher into its own top bar picker",
+    "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/461",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-30T15:33:52Z",
+    "labels": [],
+    "number": 97,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "open",
+    "title": "feat(ui): move the studio switcher into its own top-bar picker",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/97",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-30T15:33:25Z",
+    "labels": [],
+    "number": 41,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "open",
+    "title": "feat(app): move the studio switcher into its own top-bar control",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/41",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-09-30T11:51:30Z",
+    "labels": [],
+    "number": 26,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "open",
+    "title": "fix(studio-picker): size the trigger, rows and arrow for touch widths",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/26",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-30T13:24:08Z",
+    "createdAt": "2026-09-30T11:47:05Z",
+    "labels": [],
+    "number": 199,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(nav): the studio picker as its own top-bar control",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/199",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-30T10:58:46Z",
+    "createdAt": "2026-09-30T09:00:08Z",
+    "labels": [],
+    "number": 25,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "merged",
+    "title": "feat(studio-picker): add the top-bar studio switcher",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/25",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-30T07:54:48Z",
+    "createdAt": "2026-09-30T05:57:22Z",
+    "labels": [],
+    "number": 198,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "fix(insights): show every sleeper's nights, not just the current roster's",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/198",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-09-30T06:01:32Z",
+    "createdAt": "2026-09-30T00:56:53Z",
+    "labels": [],
+    "number": 83,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "fix(sleep-sessions): read SleepRecordsCurrent and scope device insights by device",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/83",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "2026-09-29T19:41:26Z",
     "createdAt": "2026-09-29T18:36:03Z",
     "labels": [],
@@ -56,7 +210,7 @@
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-09-30T13:32:18Z",
     "createdAt": "2026-09-29T13:21:37Z",
     "labels": [],
     "number": 193,
@@ -64,7 +218,7 @@
       "name": "orion-data-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "Merge `develop` to `main`",
     "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/193",
     "org": "Orion-Sleep"
