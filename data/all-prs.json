@@ -1,6 +1,6 @@
 [
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-10-02T11:18:20Z",
     "createdAt": "2026-10-01T21:04:25Z",
     "labels": [],
     "number": 32,
@@ -8,7 +8,7 @@
       "name": "orion-admin-studio-components",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat(uplot-chart): add a percent unit for values already on 0-100",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/32",
     "org": "Orion-Sleep"
