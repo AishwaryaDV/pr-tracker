@@ -1,6 +1,20 @@
 [
   {
     "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-10-04T06:06:25Z",
+    "labels": [],
+    "number": 36,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "open",
+    "title": "feat(uplot-chart,studio-picker): compact bed side glyph and a five-digit studio range",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/36",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-04T06:06:39Z",
     "createdAt": "2026-10-03T11:45:42Z",
     "labels": [],
     "number": 35,
@@ -8,7 +22,7 @@
       "name": "orion-admin-studio-components",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
     },
-    "state": "open",
+    "state": "closed",
     "title": "feat(studio-picker): widen the studio shortcut digit range to five",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/35",
     "org": "Orion-Sleep"
@@ -28,7 +42,7 @@
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-10-04T06:06:36Z",
     "createdAt": "2026-10-03T03:45:27Z",
     "labels": [],
     "number": 34,
@@ -36,7 +50,7 @@
       "name": "orion-admin-studio-components",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
     },
-    "state": "open",
+    "state": "closed",
     "title": "feat(uplot-chart): add a compact size to the bed side glyph",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/34",
     "org": "Orion-Sleep"
