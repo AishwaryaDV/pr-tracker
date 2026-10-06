@@ -1,6 +1,90 @@
 [
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-10-05T13:38:21Z",
+    "createdAt": "2026-10-05T12:28:53Z",
+    "labels": [],
+    "number": 214,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "Merge `develop` to `main`",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/214",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-05T12:36:35Z",
+    "createdAt": "2026-10-05T11:13:22Z",
+    "labels": [],
+    "number": 213,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(telemetry): mark the temperature series by bed side so the tooltip shows which half",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/213",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-05T10:54:30Z",
+    "createdAt": "2026-10-05T09:21:52Z",
+    "labels": [],
+    "number": 37,
+    "repository": {
+      "name": "orion-admin-studio-components",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
+    },
+    "state": "merged",
+    "title": "feat(uplot-chart): mark the bed side of a tooltip row group",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/37",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-05T07:55:51Z",
+    "createdAt": "2026-10-05T05:00:45Z",
+    "labels": [],
+    "number": 100,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(studio-switcher): add the ops studio row",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/100",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-05T07:56:29Z",
+    "createdAt": "2026-10-05T05:00:29Z",
+    "labels": [],
+    "number": 45,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(studio-switcher): add the ops studio row",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/45",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-05T08:08:09Z",
+    "createdAt": "2026-10-05T05:00:14Z",
+    "labels": [],
+    "number": 470,
+    "repository": {
+      "name": "orion-sales-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-sales-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(studio-switcher): add the ops studio row",
+    "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/470",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-05T06:56:09Z",
     "createdAt": "2026-10-04T06:06:25Z",
     "labels": [],
     "number": 36,
@@ -8,7 +92,7 @@
       "name": "orion-admin-studio-components",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
     },
-    "state": "open",
+    "state": "merged",
     "title": "feat(uplot-chart,studio-picker): compact bed side glyph and a five-digit studio range",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/36",
     "org": "Orion-Sleep"
@@ -28,7 +112,7 @@
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-10-05T10:55:11Z",
     "createdAt": "2026-10-03T11:39:56Z",
     "labels": [],
     "number": 211,
@@ -36,8 +120,8 @@
       "name": "orion-data-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
     },
-    "state": "open",
-    "title": "feat(telemetry): chart CB temperature and humidity below the firmware card",
+    "state": "merged",
+    "title": "feat(devices): CB temperature and humidity charts, bed glyph on live controls, and ops studio",
     "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/211",
     "org": "Orion-Sleep"
   },
@@ -112,7 +196,7 @@
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-10-05T17:39:57Z",
     "createdAt": "2026-10-01T16:08:47Z",
     "labels": [],
     "number": 29,
@@ -120,7 +204,7 @@
       "name": "orion-admin-studio-components",
       "nameWithOwner": "Orion-Sleep/orion-admin-studio-components"
     },
-    "state": "open",
+    "state": "closed",
     "title": "fix(top-bar): lay the bar out in three tracks so the search cannot run under the actions",
     "url": "https://github.com/Orion-Sleep/orion-admin-studio-components/pull/29",
     "org": "Orion-Sleep"
@@ -168,7 +252,7 @@
     "org": "Orion-Sleep"
   },
   {
-    "closedAt": "0001-01-01T00:00:00Z",
+    "closedAt": "2026-10-05T19:04:10Z",
     "createdAt": "2026-10-01T08:37:23Z",
     "labels": [],
     "number": 98,
@@ -176,7 +260,7 @@
       "name": "orion-test-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
     },
-    "state": "open",
+    "state": "merged",
     "title": "Merge `develop` to `main`",
     "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/98",
     "org": "Orion-Sleep"
