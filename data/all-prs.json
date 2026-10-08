@@ -1,5 +1,117 @@
 [
   {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-10-07T19:03:56Z",
+    "labels": [],
+    "number": 107,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "open",
+    "title": "chore(deps): bump admin-studio-networking to ^0.58.0",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/107",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-07T20:38:08Z",
+    "createdAt": "2026-10-07T18:46:08Z",
+    "labels": [],
+    "number": 221,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(telemetry): narrow Dev Home history reads to the panels its chart cards use",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/221",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-07T22:50:14Z",
+    "createdAt": "2026-10-07T18:38:42Z",
+    "labels": [],
+    "number": 106,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "merged",
+    "title": "release: bed-side temperature marking and networking ^0.56.0",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/106",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-07T18:27:30Z",
+    "createdAt": "2026-10-07T14:55:02Z",
+    "labels": [],
+    "number": 100,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(telemetry-history): let a caller read only the panels on screen",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/100",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-07T18:23:14Z",
+    "createdAt": "2026-10-07T14:44:12Z",
+    "labels": [],
+    "number": 105,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "merged",
+    "title": "feat(telemetry): mark the temperature series by bed side and bump networking to ^0.56.0",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/105",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-07T14:09:03Z",
+    "createdAt": "2026-10-07T13:08:56Z",
+    "labels": [],
+    "number": 99,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "perf(telemetry): drop the per-panel parallel split for history reads",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/99",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-07T14:03:50Z",
+    "createdAt": "2026-10-07T09:08:42Z",
+    "labels": [],
+    "number": 220,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "feat(telemetry): run telemetry history reads per-panel in parallel",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/220",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-07T10:11:55Z",
+    "createdAt": "2026-10-07T09:04:17Z",
+    "labels": [],
+    "number": 97,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(telemetry): optional per-panel parallel split for history reads",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/97",
+    "org": "Orion-Sleep"
+  },
+  {
     "closedAt": "2026-10-05T13:38:21Z",
     "createdAt": "2026-10-05T12:28:53Z",
     "labels": [],
