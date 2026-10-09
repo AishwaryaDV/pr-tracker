@@ -1,6 +1,160 @@
 [
   {
     "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-10-08T22:28:51Z",
+    "labels": [],
+    "number": 114,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "open",
+    "title": "refactor(api): own the test endpoints in the app",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/114",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-08T22:44:49Z",
+    "createdAt": "2026-10-08T22:28:47Z",
+    "labels": [],
+    "number": 498,
+    "repository": {
+      "name": "orion-sales-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-sales-studio-web"
+    },
+    "state": "closed",
+    "title": "refactor(api): own the sales endpoints in the app",
+    "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/498",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-08T22:37:06Z",
+    "createdAt": "2026-10-08T15:43:42Z",
+    "labels": [],
+    "number": 111,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "closed",
+    "title": "refactor(api): own the studio-preferences and device-register reads in the app",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/111",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-10-08T15:35:38Z",
+    "labels": [],
+    "number": 225,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "open",
+    "title": "refactor(api): own the link-meta and device-events reads in the app",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/225",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-08T17:03:44Z",
+    "createdAt": "2026-10-08T15:30:09Z",
+    "labels": [],
+    "number": 493,
+    "repository": {
+      "name": "orion-sales-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-sales-studio-web"
+    },
+    "state": "closed",
+    "title": "chore(deps): bump @orionsleep/admin-studio-networking to ^0.62.0",
+    "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/493",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-08T17:03:50Z",
+    "createdAt": "2026-10-08T15:24:17Z",
+    "labels": [],
+    "number": 110,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "closed",
+    "title": "refactor(factories): own the factories endpoints in the app",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/110",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-08T15:54:58Z",
+    "createdAt": "2026-10-08T15:24:14Z",
+    "labels": [],
+    "number": 57,
+    "repository": {
+      "name": "orion-admin-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-web"
+    },
+    "state": "merged",
+    "title": "refactor(users): own the users and scopes endpoints in the app, not the networking package",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-web/pull/57",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-08T17:03:47Z",
+    "createdAt": "2026-10-08T15:21:56Z",
+    "labels": [],
+    "number": 224,
+    "repository": {
+      "name": "orion-data-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-data-studio-web"
+    },
+    "state": "closed",
+    "title": "refactor(device-events): own the fleet activity reads in the studio",
+    "url": "https://github.com/Orion-Sleep/orion-data-studio-web/pull/224",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-10-08T12:10:15Z",
+    "labels": [],
+    "number": 490,
+    "repository": {
+      "name": "orion-sales-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-sales-studio-web"
+    },
+    "state": "open",
+    "title": "feat(server): own the sales endpoints in the app",
+    "url": "https://github.com/Orion-Sleep/orion-sales-studio-web/pull/490",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-08T14:08:24Z",
+    "createdAt": "2026-10-08T11:03:16Z",
+    "labels": [],
+    "number": 103,
+    "repository": {
+      "name": "orion-admin-studio-networking",
+      "nameWithOwner": "Orion-Sleep/orion-admin-studio-networking"
+    },
+    "state": "merged",
+    "title": "feat(server): export advisor-busy, zip-store and the transcript formatter",
+    "url": "https://github.com/Orion-Sleep/orion-admin-studio-networking/pull/103",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "0001-01-01T00:00:00Z",
+    "createdAt": "2026-10-08T10:07:00Z",
+    "labels": [],
+    "number": 109,
+    "repository": {
+      "name": "orion-test-studio-web",
+      "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
+    },
+    "state": "open",
+    "title": "fix(telemetry): bring bed orientation and glyphs to parity with data studio",
+    "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/109",
+    "org": "Orion-Sleep"
+  },
+  {
+    "closedAt": "2026-10-08T06:22:43Z",
     "createdAt": "2026-10-07T19:03:56Z",
     "labels": [],
     "number": 107,
@@ -8,7 +162,7 @@
       "name": "orion-test-studio-web",
       "nameWithOwner": "Orion-Sleep/orion-test-studio-web"
     },
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump admin-studio-networking to ^0.58.0",
     "url": "https://github.com/Orion-Sleep/orion-test-studio-web/pull/107",
     "org": "Orion-Sleep"
